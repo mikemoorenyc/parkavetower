@@ -1,0 +1,42 @@
+.btn-dl {
+  display:inline-block;
+  min-width: 220px;
+  text-align: center;
+  line-height:58px;
+  padding: 0 10px;
+  border: 1px solid $black;
+  transition: border-color $ts;
+  > * {
+    display:inline-block;
+    vertical-align: middle;
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+    > * {
+      fill: $white;
+      transition: fill $ts;
+    }
+  }
+  .copy {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin-left: 2px;
+    color: $white;
+    font-size: 14px;
+    transition:color $ts;
+  }
+  &:hover {
+    border-color: $white;
+    .copy {
+      color:$black;
+    }
+    svg {
+      > * {
+        fill: $black;
+      }
+    }
+
+  }
+}

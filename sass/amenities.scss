@@ -1,0 +1,19 @@
+#amenities {
+  .container-1200 {
+    padding-top: 70px;
+  }
+  #amenities-gallery {
+    padding-top: 49px;
+    .slide-container {
+      padding-top:30px;
+      &:first-child {
+        padding-top: 0;
+      }
+      h2 {
+        text-align: left;
+        margin: 5px 0 0 0;
+        padding: 0 percentage(12/320);
+      }
+    }
+  }
+}

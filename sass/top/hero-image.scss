@@ -1,0 +1,10 @@
+#hero-image {
+  position:relative;
+  width: 100%;
+  background-size:cover;
+  background-position:center center;
+  padding-top: percentage(216/320);
+  @media($dt) {
+    padding-top:percentage(550/1200);
+  }
+}

@@ -1,0 +1,35 @@
+#building-within-a-building {
+  //background: grey;
+  .wrapper {
+    padding: 65px 0 0px;
+    @media($dt) {
+      padding-top:160px;
+    }
+  }
+  .dl-holder {
+    padding-top: 40px;
+  }
+  .bwb-gallery {
+    padding-top: 80px;
+    @media($dt) {
+      padding-top:155px;
+    }
+  }
+  .bwb-graphic {
+    position:relative;
+    margin-top:-50px;
+    @media($dt) {
+      margin-top: -100px;
+    }
+    .container {
+      display:inline-block;
+      position:relative;
+      img.bwb-highlight {
+        position: absolute;
+        bottom: 4em;
+        right: 4em;
+        width: 464em;
+      }
+    }
+  }
+}

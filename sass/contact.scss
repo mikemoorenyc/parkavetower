@@ -1,0 +1,65 @@
+#contact {
+  padding-bottom: 50px;
+  @media($dt) {
+    padding-bottom: 65px;
+  }
+  .container-1200 {
+    padding-top: 85px;
+    @media($dt) {
+      padding-top: 650px;
+    }
+  }
+  .copy-container {
+    h1 {
+      margin: 0;
+    //  padding-bottom: 2em;
+    @media($dt) {
+      display:none;
+    }
+    }
+  }
+  .contact-block {
+    padding-top:45px;
+    @media($dt) {
+      padding-top: 90px;
+    }
+    &.ngkf {
+      @media($dt) {
+        padding-top: 0;
+      }
+      img {
+        width: 143px;
+        height: 25px;
+      }
+    }
+    &.equity {
+
+      img {
+        width: 140px;
+        height: 28px;
+      }
+    }
+    > ul {
+      @media($dt) {
+        letter-spacing: -4px;
+      }
+      >li {
+        padding-top: 25px;
+        @media($dt) {
+          letter-spacing: $lt-normal;
+          display:inline-block;
+          vertical-align: top;
+          width:33%;
+          padding: 50px 10px 0 10px;
+        }
+        * {
+          font-size: 14px;
+          color:white;
+          text-transform:none;
+          margin: 0;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}

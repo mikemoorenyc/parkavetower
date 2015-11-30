@@ -1,0 +1,162 @@
+#workspace {
+  > .container-1200 {
+    padding-top: 70px;
+    @media($dt) {
+      padding-top:280px;
+    }
+  }
+  .elevation {
+    padding-top: 50px;
+    @media($dt) {
+      padding-top:130px;
+    }
+    .inner{
+
+    }
+    .mob-elevation {
+      max-width: (100% - (percentage(12/320)*2));
+      @media($dt) {
+        display:none;
+      }
+    }
+  }
+  .dt-elevation {
+    display:none;
+    @media($dt) {
+      display:inline-block;
+      position:relative;
+      .cutter {
+        overflow:hidden;
+        position:relative;
+      }
+      img {
+        pointer-events: none;
+        position:relative;
+      }
+      .elevator-imgs {
+        img {
+          pointer-events: none;
+          position: absolute;
+          bottom: 4px;
+          &.e-1 {
+            left: 256px;
+          }
+          &.e-2 {
+            left: 277px;
+          }
+          &.e-3 {
+            left: 298px;
+          }
+        }
+      }
+      .e-labels {
+        span {
+          display:block;
+          position: absolute;
+          left: 265px;
+          bottom: 30px;
+          color: $white;
+          font-size: 9px;
+          font-weight: bold;
+          text-transform:uppercase;
+          line-height: 15px;
+          transform-origin: left center;
+          transform: rotate(-90deg);
+          pointer-events:none;
+          &.e-2 {
+            left: 285px;
+          }
+          &.e-3 {
+            left: 306px;
+          }
+        }
+      }
+      .hilights {
+        > a {
+          display:block;
+          opacity:.0;
+          position: absolute;
+          cursor:pointer;
+          transition: opacity $ts;
+          &:hover,&.__hovering {
+            opacity:.25;
+          }
+          &.bwb {
+            left: 78px;
+            bottom: 2px;
+            width:258px;
+            height: 413px;
+            background: url('#{$imgDir}/bwb-hilight.png');
+          }
+          &.towerfloors {
+            left: 129px;
+            bottom: (414px);
+            width:205px;
+            height: (264px);
+            background: url('#{$imgDir}/towerfloor-hilight.png');
+
+          }
+          &.penthouse {
+            left: 129px;
+            bottom: (413px+264);
+            width:208px;
+            height: (136px);
+            background: url('#{$imgDir}/penthouse-hilight.png');
+
+          }
+        }
+      }
+      .poplinks {
+        position:absolute;
+        right: 420px;
+        top: 90px;
+        text-align: right;
+
+        > li {
+          &.towerfloors {
+            padding-top: 160px;
+          }
+          &.bwb {
+            padding-top:256px;
+          }
+          a {
+            display:inline-block;
+            border: 1px solid $black;
+            color: $black;
+            font-size: 12px;
+            line-height:33px;
+            padding: 0 8px;
+            text-transform:uppercase;
+            font-weight:400;
+            letter-spacing:.15em;
+            white-space: nowrap;
+            transition: all $ts;
+            &:hover, &.__hovering {
+              color:$white;
+              border-color:$white;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  #download-list {
+    margin-top: 48px;
+    @media($dt) {
+      margin-top: 115px;
+    }
+    > ul {
+      > li {
+        padding-top: 15px;
+        @media(min-width:950px) {
+          display:inline-block;
+          width: 24.5%;
+        }
+        &:first-child {
+          padding:0;
+        }
+      }
+    }
+  }
+}

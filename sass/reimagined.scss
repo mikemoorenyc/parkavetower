@@ -1,0 +1,14 @@
+#newly-reimagined {
+  .container-1200 {
+    padding-top: 75px;
+    @media($dt) {
+      padding-top:190px;
+    }
+  }
+  .reimagined-cards {
+    padding-top: 45px;  
+    @media($dt) {
+      padding-top:60px;
+    }
+  }
+}

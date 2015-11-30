@@ -1,0 +1,110 @@
+#location {
+  .top-copy {
+    padding-top: 70px;
+  }
+  .map {
+    img {
+      width: 600px;
+      max-width: 600px;
+      position: relative;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      mask-image: linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100% );
+      @media($dt) {
+        width: auto;
+        max-width: 100%;
+      }
+
+    }
+  }
+  #location-gallery {
+    position: relative;
+    margin: 0 percentage(12/320);
+    padding-top: 35px;
+    .slider {
+      cursor:ew-resize;
+    }
+    @media($dt) {
+      padding-top: 150px;
+      margin: 0;
+    }
+    .slide {
+      float: left;
+      .img-container {
+        position:relative;
+        display:inline-block;
+        background-position: bottom center;
+        background-size:cover;
+      }
+      @media($dt) {
+
+        width: 600px;
+        opacity:.25;
+        transition: opacity $ts;
+        height: 385px;
+        &.slide-activated {
+          opacity: 1;
+          .img-container {
+            height: 360px;
+            transform: translateY(0px);
+          }
+        }
+        .img-container {
+          width: 580px;
+          height: 335px;
+          margin: 0 auto;
+          transition: all $ts;
+          transform: translateY(53px);
+          transform-origin: bottom center;
+          img {
+            display:none;
+          }
+        }
+
+      }
+    }
+    .gal-footer {
+      padding-top: 5px;
+      position: relative;
+      @media($dt) {
+        position: absolute;
+        padding: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 700px;
+        top: 105px;
+      }
+      > * {
+        float: left;
+      }
+      .copy {
+        text-align: left;
+        padding-right: 10px;
+        opacity: 1;
+        transition: opacity $ts;
+        margin: 0;
+        &:after {
+          content: '\00a0\00a0';
+        }
+        &.__transitioning {
+          opacity: 0;
+        }
+      }
+      .counter {
+        @media($dt) {
+          display:none;
+        }
+        position:absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+        letter-spacing:.15em;
+      }
+      .all {
+        &:before {
+          content: '/';
+        }
+      }
+    }
+  }
+}
