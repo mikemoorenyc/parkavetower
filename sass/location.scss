@@ -1,6 +1,9 @@
 #location {
   .top-copy {
     padding-top: 70px;
+    @media($dt) {
+      padding-top:285px;
+    }
   }
   .map {
     img {

@@ -169,12 +169,22 @@ blockquote {
 }
 .copy-container {
   padding: 0 percentage(12/320);
+  box-sizing:content-box;
   @media(min-width:740px) {
-    padding: 0;
+//    padding: 0;
     max-width: 700px;
     margin: 0 auto;
-    &.wide {
-      max-width: 785px;
+    &.l-605 {
+      max-width: 605px;
+    }
+    &.l-775 {
+      max-width: 775px;
+    }
+    &.l-820 {
+      max-width: 820px;
+    }
+    &.l-860 {
+      max-width:860px;
     }
   }
 }

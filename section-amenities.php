@@ -5,7 +5,7 @@ $amenities = get_page_by_title('Amenities Section');
 ?>
 <div class="container-1200">
   <article id="club">
-    <div class="copy-container gradientmaker">
+    <div class="copy-container gradientmaker wide">
       <span class="stops hide">
         <hr data-amount="150" data-from="below" data-position="top" data-color="#000000" />
       </span>
@@ -20,7 +20,7 @@ $amenities = get_page_by_title('Amenities Section');
     foreach($amengal as $ag) {
       ?>
       <div class="slide-container">
-        <div class="inner">
+        <div class="inner clearfix">
           <div class="img-holder">
             <?php
             $mobSrc = wp_get_attachment_image_src($ag['image'], 'medium', false);
@@ -29,7 +29,11 @@ $amenities = get_page_by_title('Amenities Section');
             <img class="lazy-load" data-mob="<?php echo $mobSrc;?>" data-dt="<?php echo $mobSrc;?>" />
           </div>
 
-          <h2 class="sm"><?php echo $ag['title'];?></h2>
+          <h2 class="sm">
+            <span class="inner">
+              <?php echo $ag['title'];?>
+            </span>
+          </h2>
 
 
         </div>

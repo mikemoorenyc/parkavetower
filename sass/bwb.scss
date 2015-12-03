@@ -24,12 +24,44 @@
     .container {
       display:inline-block;
       position:relative;
+      img {
+        opacity: 0;
+        transition: opacity $ts*2;
+        &.__activated {
+          opacity: 1;
+        }
+      }
       img.bwb-highlight {
         position: absolute;
         bottom: 4em;
         right: 4em;
         width: 464em;
+        &.__activated {
+          opacity: .5;
+          animation: bwbpulse 4s linear infinite;
+          animation-delay: $ts*2;
+        }
       }
     }
+  }
+}
+
+
+
+@keyframes bwbpulse {
+  0% {
+    opacity: .5;
+  }
+  25% {
+    opacity: .75;
+  }
+  50% {
+    opacity: .5;
+  }
+  75% {
+    opacity:.35;
+  }
+  100% {
+    opacity: .5;
   }
 }

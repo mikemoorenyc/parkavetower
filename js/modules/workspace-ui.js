@@ -37,6 +37,7 @@ $('.hilights > a, .poplinks li a').click(function(){
     });
     $(theImg).attr('src', $(theImg).attr('data-src'));
   });
+  $('#workspace-modal').fadeIn(ts);
   $('html').addClass('__modal-opened');
   function fullyLoaded(){
     $('#workspace-modal .slider').slick({
@@ -51,10 +52,13 @@ $('.hilights > a, .poplinks li a').click(function(){
 });
 
 $('#workspace-modal .modal-close').click(function(){
-  $('html').removeClass('__modal-opened');
-  setTimeout(function(){
+  $('#workspace-modal').fadeOut(ts,function(){
     $('#workspace-modal').removeClass('images-loaded');
     $('#workspace-modal .slider').slick('unslick');
+    $('html').removeClass('__modal-opened');
+  });
+  setTimeout(function(){
+
   },ts);
   return false;
 });

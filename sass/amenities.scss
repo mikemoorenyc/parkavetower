@@ -1,6 +1,9 @@
 #amenities {
   .container-1200 {
     padding-top: 70px;
+    @media($dt) {
+      padding-top:250px;
+    }
   }
   #amenities-gallery {
     padding-top: 49px;

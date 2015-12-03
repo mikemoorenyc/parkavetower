@@ -4,8 +4,8 @@ function lazyLoad() {
   $('img.lazy-load').each(function(){
     var img = $(this),
         realSrc = '',
-        dtSrc = $(this).data('dt'),
-        mobSrc = $(this).data('mob');
+        dtSrc = $(this).attr('data-dt'),
+        mobSrc = $(this).attr('data-mob');
     function srcPick() {
       if(windoww < dt) {
         realSrc = mobSrc;

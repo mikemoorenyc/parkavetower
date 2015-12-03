@@ -1,5 +1,10 @@
 <section id="building">
-  <article id="building-within-a-building" class="gradientmaker">
+  <article id="building-within-a-building" class="gradientmaker skroll-maker">
+    <span data-anchor="bwb-bg" class="skroll-stops hide">
+      <hr data-amount="0" data-from="top" data-at="bottom" />
+      <hr data-amount="0" data-from="top" data-at="center" />
+
+    </span>
     <span class="stops hide">
       <hr data-amount="50" data-from="below" data-position="top" data-color="#000" />
       <hr data-amount="0" data-from="above" data-position="middle" data-color="#54c3bb" />
@@ -11,7 +16,7 @@
 
     ?>
     <div class="container-1200">
-      <div class="copy-container wide">
+      <div class="copy-container ">
         <h1 class="middle"><?php echo $bwb->post_title;?></h1>
         <div class="copy">
           <?php echo wpautop($bwb->post_content);?>
@@ -19,7 +24,7 @@
         </div>
 
       </div>
-      <div class="bwb-graphic container-1200 pad">
+      <div class="bwb-graphic container-1200 pad scroll-magic" data-scrollfunction="bwbFloorplanAnimation">
         <!--<img src="<?php echo $siteDir;?>/assets/imgs/bwb-placeholder.png" />-->
         <div class="container aspecter" data-basewidth="1061">
           <img class="bwb-main lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/bwb-real.png" data-mob="<?php echo $siteDir;?>/assets/imgs/bwb-real.png" />

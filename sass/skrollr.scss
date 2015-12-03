@@ -1,0 +1,45 @@
+html.skrollr {
+  body {
+    background: $black !important;
+  }
+}
+#fader-backgrounds {
+  display:none;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  html.skrollr & {
+    display:block;
+  }
+  > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  #bwb-bg {
+    background: $teal;
+    background: linear-gradient(to bottom,  #23514e 0% ,   $teal 50%,   #23514e 100%);
+  }
+  #penthouse-bg {
+    background: #2f798c;
+    background: linear-gradient(to bottom,  #1b454f 0% ,   #2f798c 50%,   #1b454f 100%);
+  }
+  #workspace-intro {
+    background: linear-gradient(to top,  $teal 0%,  $black 100%);
+  }
+  #workspace-bg {
+    background: $teal;
+    //background: linear-gradient(to bottom, #23514e 0%, $teal 15%, $teal 85%,  #23514e 100%)
+    //background: linear-gradient(to bottom, 0% black, 100% $teal);
+  }
+  #contact-bg {
+    background: linear-gradient(to bottom,  $teal 0%,  $black 100%);
+  }
+
+}

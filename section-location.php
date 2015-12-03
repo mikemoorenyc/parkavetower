@@ -6,7 +6,7 @@
   ?>
   <article class='top-copy'>
 
-    <div class="copy-container">
+    <div class="copy-container xl">
   <?php echo wpautop($location->post_content);?>
     </div>
 

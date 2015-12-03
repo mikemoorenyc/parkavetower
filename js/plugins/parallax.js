@@ -28,7 +28,7 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //
 //============================================================
-
+  
 /**
  * jQuery || Zepto Parallax Plugin
  * @author Matthew Wagerfield - @wagerfield

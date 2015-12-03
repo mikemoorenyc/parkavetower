@@ -4,7 +4,7 @@
 <?php
 include 'section-reimagined.php';
 ?>
-
+<div id="elevation-section">
 <div class="container-1200">
   <?php
   $workspace = get_page_by_title('Workspace Section');
@@ -19,15 +19,26 @@ include 'section-reimagined.php';
   </div>
 
   <div class="elevation">
-    <div class="inner gradientmaker">
+    <div class="inner gradientmaker scroll-magic" data-scrollfunction="buildingAnimation">
       <span class="stops hide">
         <hr data-amount="0" data-from="above" data-position="top" data-color="#54c3bb" />
 
       </span>
+
       <img class="lazy-load mob-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" data-mob="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" />
 
       <div class="dt-elevation">
       <div class="cutter">
+        <div class="lights">
+          <?php
+          //44
+          for($x = 45; $x > 0; $x--) {
+            ?>
+            <div class="floor fl-<?php echo $x;?>" ></div>
+            <?php
+          }
+          ?>
+        </div>
         <div class="hilights">
           <a href="#" class="bwb"></a>
           <a href="#" class="towerfloors"></a>
@@ -110,6 +121,7 @@ include 'section-reimagined.php';
   </div>
 
 
+</div>
 </div>
 
 <?php

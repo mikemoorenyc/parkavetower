@@ -1,3 +1,4 @@
+
 html.__modal-opened {
   overflow-y: hidden;
 }
@@ -10,14 +11,15 @@ html.__modal-opened {
   background: rgba($black,.9);
   z-index:11;
   overflow:hidden;
-  opacity: 0;
+  /*opacity: 0;
   transform:translateX(-100%);
-  transition: transform 0s $ts, opacity $ts;
+  transition: transform 0s $ts, opacity $ts;*/
+  display:none;
 
   html.__modal-opened & {
-    opacity: 1;
+    /*opacity: 1;
     transform: translateX(0);
-    transition: transform 0s 0s, opacity $ts;
+    transition: transform 0s 0s, opacity $ts;*/
   }
   &.images-loaded {
     .spinner {

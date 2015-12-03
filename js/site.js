@@ -7,6 +7,16 @@ function siteInit() {
 
 
   //GLOBALS
+  if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    mobileDetector = false;
+  } else {
+    mobileDetector = true;
+  }
+
+  jQuery.scrollSpeed(100, 800);
+
+
+
   ts = 500,
   tab = 401,
   dt = 801;
@@ -84,6 +94,7 @@ function siteInit() {
   }
   heroImage();
   backgroundGradient();
+  characterCounter();
 
 
 
@@ -93,6 +104,16 @@ function siteInit() {
 
 
   lazyLoad();
+  scrollMagic();
+  //TURN ON SKROLLR
+  if(mobileDetector == false) {
+    skroll = skrollr.init();
+  }
+
+
+  $(window).scroll(function(){
+    scrollMagic();
+  });
 
   //Initialize Everything
   var initializeAll = setInterval(function(){
@@ -114,6 +135,36 @@ function initializer() {
   viewMaker();
   aspecter();
   backgroundGradient();
+  getScrollbarWidth();
+  if(mobileDetector == false) {
+    skroll.refresh();
+  }
+}
+
+function getScrollbarWidth() {
+    var outer = document.createElement("div");
+    outer.style.visibility = "hidden";
+    outer.style.width = "100px";
+    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+    document.body.appendChild(outer);
+
+    var widthNoScroll = outer.offsetWidth;
+    // force scrollbars
+    outer.style.overflow = "scroll";
+
+    // add innerdiv
+    var inner = document.createElement("div");
+    inner.style.width = "100%";
+    outer.appendChild(inner);
+
+    var widthWithScroll = inner.offsetWidth;
+
+    // remove divs
+    outer.parentNode.removeChild(outer);
+
+    //return widthNoScroll - widthWithScroll;
+    $('body').append('<style>html.__modal-opened body, html.__modal-opened header{ padding-right: '+(widthNoScroll - widthWithScroll)+'px }</style>');
 }
 
 $(window).resize(function(){
