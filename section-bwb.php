@@ -1,5 +1,5 @@
 <section id="building">
-  <article id="building-within-a-building" class="gradientmaker skroll-maker">
+  <div id="building-within-a-building" class="gradientmaker skroll-maker">
     <span data-anchor="bwb-bg" class="skroll-stops hide">
       <hr data-amount="0" data-from="top" data-at="bottom" />
       <hr data-amount="0" data-from="top" data-at="center" />
@@ -62,9 +62,9 @@
 
 
     </div>
-  </article>
+  </div>
 
-  <article id="penthouse" class="gradientmaker">
+  <div id="penthouse" class="gradientmaker">
     <span class="stops hide">
       <hr data-amount="0" data-from="above" data-position="top" data-color="#000" />
       <hr data-amount="100" data-from="above" data-position="bottom" data-color="#2f798c" />
@@ -75,7 +75,7 @@
 
     ?>
     <div class="copy-container">
-      <h1><?php echo $penthouse->post_title;?></h1>
+      <h2><?php echo $penthouse->post_title;?></h2>
       <div class="copy">
         <?php echo wpautop($penthouse->post_content);?>
 
@@ -127,5 +127,5 @@
     </div>
 
     </div>
-  </article>
+  </div>
 </section>

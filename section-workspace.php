@@ -1,9 +1,10 @@
-<section id="workspace" class=>
-
-
 <?php
 include 'section-reimagined.php';
 ?>
+<section id="workspace" class=>
+
+
+
 <div id="elevation-section">
 <div class="container-1200">
   <?php

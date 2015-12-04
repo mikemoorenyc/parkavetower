@@ -8,7 +8,8 @@ $('.hilights > a, .poplinks li a').mouseleave(function(){
 });
 
 
-$('.hilights > a, .poplinks li a').click(function(){
+$('.hilights > a, .poplinks li a').click(function(e){
+  e.preventDefault();
   var theclass = $(this).attr('class');
   theclass = theclass.replace(' __hovering','');
   var modalContent = $('#modal-content .'+theclass);

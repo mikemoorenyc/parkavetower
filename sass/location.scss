@@ -24,6 +24,9 @@
     position: relative;
     margin: 0 percentage(12/320);
     padding-top: 35px;
+    * {
+      cursor: ew-resize;
+    }
     .slider {
       cursor:ew-resize;
     }

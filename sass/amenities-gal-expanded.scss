@@ -11,39 +11,41 @@
     }
     .img-holder {
       img {
-        box-shadow: 0 0px 7px rgba(black,.5);
+        box-shadow: 2px -2px 7px 0px rgba(0, 0, 0, 0.5);
         width: 100%;
+        position:relative !important;
       }
     }
     h2 {
       margin: 0;
       padding: 0;
-      position:relative;
+      position:relative !important;
       .inner {
         display:inline-block;
         max-width:240px;
       }
     }
-    &:nth-child(odd) {
-      .inner {
-        > * {
-          float:left;
-        }
+    //
+    .wrap >.inner {
+
+      > * {
+        float: left;
+
       }
     }
     &:nth-child(even) {
-      .inner {
+      .wrap > .inner {
         > * {
-          float:right;
+          float: right;
         }
-        h2 {
+        > h2 {
           text-align: right;
         }
       }
     }
     &:nth-child(4n+1) {
-      z-index:1;
-
+      z-index:2;
+      margin-bottom: -6px;
       .img-holder {
         margin-left: 9.5%;
         width: 47%;
@@ -51,39 +53,42 @@
       h2 {
         width: 100% - (47%+9.5%);
         padding: 0 10px;
-        top: 24px;
+        top: 24px !important;
       }
     }
     &:nth-child(4n+2) {
-      z-index:2;
+      margin-bottom: -55px;
+      z-index:3;
       .img-holder {
-        width:61.5%;
+        width:62.5%;
       }
       h2 {
-        width: 100% - 61.5%;
-        top: 85px;
+        width: 100% - 62.5%;
+        top: 85px !important;
         padding: 0 10px;
       }
 
     }
     &:nth-child(4n+3) {
-      z-index:3;
+      z-index:4;
+      margin-bottom:-70px;
       .img-holder {
-        width: 58%;
+        width: 63%;
       }
       h2 {
-        width: 100% - 58%;
+        width: 100% - 63%;
         padding: 10px;
-        top: 100px;
+        top: 100px !important;
       }
     }
     &:nth-child(4n+4) {
-      z-index:2;
+      margin-bottom:-10px;
+      z-index:1;
       .img-holder {
-        width: 41%;
+        width: 41.5%;
       }
       h2 {
-        width: 100% - 41%;
+        width: 100% - 41.5%;
         margin-top: 10%;
         padding: 0 10px;
       }

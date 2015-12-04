@@ -21,7 +21,7 @@ $mobSrc = $mobSrc[0];
   <img class="hide" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" />
 
 </div>
-<section id="intro">
+<div id="intro">
   <div class="copy-container">
 <?php echo wpautop($home->post_content);?>
   </div>
@@ -33,7 +33,7 @@ $mobSrc = $mobSrc[0];
 
   </div>
 
-</section>
+</div>
 </div>
 
 </section>

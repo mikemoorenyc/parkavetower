@@ -1,4 +1,8 @@
 function siteInit() {
+
+  hashUrl = String(window.location.hash);
+
+
   if ('addEventListener' in document) {
       document.addEventListener('DOMContentLoaded', function() {
           FastClick.attach(document.body);
@@ -13,7 +17,7 @@ function siteInit() {
     mobileDetector = true;
   }
 
-  jQuery.scrollSpeed(100, 800);
+  //jQuery.scrollSpeed(100, 800);
 
 
 
@@ -104,33 +108,35 @@ function siteInit() {
 
 
   lazyLoad();
-  scrollMagic();
+  //scrollMagic();
   //TURN ON SKROLLR
   if(mobileDetector == false) {
     skroll = skrollr.init();
   }
 
 
-  $(window).scroll(function(){
-    scrollMagic();
-  });
+
 
   //Initialize Everything
   var initializeAll = setInterval(function(){
     if(cssLoaded == true && imagesLoaded == true) {
       clearInterval(initializeAll);
       initializer();
+
     }
   }, 10);
 
-  var myElement = document.querySelector("header");
-  var headroom  = new Headroom(myElement);
-  headroom.init();
+
+  $("header").headroom({
+    "tolerance": 50,
+    "offset": $("header").height()
+  });
 
   $('html').addClass('_page-loaded');
   console.log('scripts loaded');
 }
 function initializer() {
+
   galleryMaker();
   viewMaker();
   aspecter();
@@ -139,6 +145,31 @@ function initializer() {
   if(mobileDetector == false) {
     skroll.refresh();
   }
+
+  if(!(Modernizr.touchevents)) {
+    $('#amenities-gallery').parallax({
+      calibrateX: false,
+      calibrateY: true
+    });
+  }
+  setTimeout(function(){
+    $('html,body').scrollTop(0);
+    if(hashUrl && hashUrl !== '#home') {
+
+      linkMover(hashUrl);
+
+    }
+    $(window).scroll(function(){
+      scrollMagic();
+    });
+
+
+    setTimeout(function(){
+
+    },500)
+  },500)
+
+
 }
 
 function getScrollbarWidth() {

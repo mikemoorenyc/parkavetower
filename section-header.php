@@ -1,6 +1,6 @@
 <header id="header">
   <h1 class="logo">
-    <a href="<?php echo $homeURL;?>">
+    <a href="#home">
       <span class="hide"><?php echo $siteTitle;?></span>
       <img src="<?php echo $siteDir;?>/assets/imgs/logo.svg" alt="Park Avenue Tower" />
     </a>

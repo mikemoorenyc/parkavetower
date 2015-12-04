@@ -1,3 +1,4 @@
+
 <?php
 
 //GET POST SLUG
@@ -76,7 +77,20 @@ else: ?>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta property="og:description" content="<?php echo $siteDesc;?>" />
+<meta property="og:image" name="thumb" content="<?php echo $siteDir;?>/assets/imgs/share-img.jpg"/>
+<meta property="og:title" content="<?php echo $siteTitle;?>"/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="<?php echo $homeURL;?>/"/>
+<meta property="og:site_name" content="<?php echo $siteTitle;?>"/>
 
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="<?php echo $homeURL;?>/">
+<meta name="twitter:creator" content="realestatearts">
+<meta name="twitter:title" content="<?php echo $siteTitle;?>">
+<meta name="twitter:description" content="<?php echo $siteDesc;?>">
+<meta name="twitter:image:src" content="<?php echo $siteDir;?>/assets/imgs/share-img.jpg">
 <?php wp_site_icon();?>
 <meta name="geo.region" content="US-NY" />
 <meta name="geo.placename" content="New York" />
@@ -91,15 +105,7 @@ else: ?>
 <![endif]-->
 
 
-<!-- FACEBOOK TAGS REMOVED ON COMPILATION UNLESS YOU UNCOMMENT-->
-<!--
-<meta property="og:site_name" content="<?php echo $siteTitle;?>" />
-<meta property="og:title" content="<?php echo get_bloginfo('description');?>" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="<?php echo $homeURL;?>" />
-<meta property="og:image" content="<?php echo $siteDir;?>/assets/blue-pin.jpg" />
-<meta property="og:description" content="<?php echo $siteDesc;?>" />
--->
+
 
 <!-- TRACKING -->
 <script>
@@ -110,7 +116,7 @@ else: ?>
 
   ga('create', 'UA-64266869-2', 'auto');
   ga('send', 'pageview');
-
+  rootPath = '<?php echo $homeURL;?>';
 </script>
 
 </head>
@@ -126,7 +132,7 @@ else: ?>
   <div id="bwb-bg" data-anchor-target=".bwb-graphic" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" ></div>
   <div id="trans-bg" data-anchor-target=".bwb-gallery .cardStack" data-start="opacity:0;" data-center-top="opacity:0" data-top-top="opacity: 1;" style="background:black;"></div>
   <div id="penthouse-bg" data-anchor-target="#penthouse" data-bottom-top="opacity:0;" data-top-top="opacity: 1;" ></div>
-  <div id="trans-bg" data-anchor-target="article#club" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" style="background:black;"></div>
+  <div id="trans-bg" data-anchor-target="#club" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" style="background:black;"></div>
   <div id="workspace-intro" data-anchor-target=".reimagined-cards .cardStack" data-start="opacity:0;" data-center-top="opacity:0;" data-top-bottom="opacity:1;" data></div>
   <div id="workspace-bg" data-anchor-target="#elevation-section .dt-elevation" data-start="opacity:0;" data-bottom-top="opacity:0;" data-center-top="opacity:1;" data></div>
   <div id="contact-bg" data-anchor-target="#contact" data-start="opacity:0;" data-bottom-top="opacity:0;" data-top-top="opacity:1;"></div>
