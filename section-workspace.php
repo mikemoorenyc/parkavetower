@@ -2,7 +2,46 @@
 include 'section-reimagined.php';
 ?>
 <section id="workspace" class=>
+<div class="container-1200">
+<div class="letter-holder aspecter" id="space" data-basewidth="1200">
+  <div class="letter s" style="width:48em; height: 85em; top: 205em; left: 58em;">
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+  </div>
 
+  <div class="letter p" style="width:47em; height: 82em; top: 205em; left: 295em;">
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+  </div>
+
+  <div class="letter a" style="width:52em; height: 81em; top: 360em; left: 437em;">
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+  </div>
+
+  <div class="letter c" style="width:50em; height: 87em; top: 360em; right:453em;">
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+  </div>
+
+  <div class="letter e" style="width:50em; height: 79em; top: 505em; right:70em;">
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+  </div>
+
+</div>
+
+</div>
 
 
 <div id="elevation-section">

@@ -163,6 +163,7 @@ blockquote {
 .container-1200 {
   max-width:1200px;
   margin: 0 auto;
+  position:relative;
   &.pad {
     padding: 0 percentage(12/320);
   }

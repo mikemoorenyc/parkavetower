@@ -135,7 +135,7 @@ else: ?>
   <div id="trans-bg" data-anchor-target="#club" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" style="background:black;"></div>
   <div id="workspace-intro" data-anchor-target=".reimagined-cards .cardStack" data-start="opacity:0;" data-center-top="opacity:0;" data-top-bottom="opacity:1;" data></div>
   <div id="workspace-bg" data-anchor-target="#elevation-section .dt-elevation" data-start="opacity:0;" data-bottom-top="opacity:0;" data-center-top="opacity:1;" data></div>
-  <div id="contact-bg" data-anchor-target="#contact" data-start="opacity:0;" data-bottom-top="opacity:0;" data-top-top="opacity:1;"></div>
+  <div id="contact-bg" data-anchor-target="#contact" data-start="opacity:0;" data-bottom-top="opacity:0;"  data-bottom-bottom="opacity:1;"></div>
 </div>
 
 

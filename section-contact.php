@@ -2,6 +2,61 @@
 <?php
 $contact = get_page_by_title('Contact Section');
 ?>
+<div class="container-1200"style="padding:0;">
+  <div class="letter-holder aspecter" data-basewidth="1200" id="contact" style="padding:0;">
+    <div class="letter c" style="width:50em; height: 87em; top: 170em; left: 70em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter o" style="width:57em; height: 87em; top: 320em; left: 70em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter n" style="width:49em; height: 81em; top: 320em; left: 265em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter t" style="width:45em; height: 84em; top: 320em; left: 480em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter a" style="width:50em; height: 85em; top: 420em; right: 470em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter c-2" style="width:50em; height: 87em; top: 420em; right: 274em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter t" style="width:50em; height: 87em; top: 420em; right: 45em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+
+  </div>
+
+</div>
 <div class="container-1200">
   <div class="copy-container gradientmaker">
     <span class="stops hide">

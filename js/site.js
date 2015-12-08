@@ -137,6 +137,12 @@ function siteInit() {
 }
 function initializer() {
 
+
+  //LEtter repeater
+  setInterval(function(){
+    letterRepeater();
+  },1000*5);
+
   galleryMaker();
   viewMaker();
   aspecter();

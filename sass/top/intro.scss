@@ -1,5 +1,6 @@
 #intro {
   padding:40px 0 0;
+  position:relative;
   @media($dt) {
     padding-top: 135px;
   }
@@ -11,7 +12,7 @@
   p {
     color: $teal;
     @media($dt) {
-      font-size:24px;
+      font-size:22px;
     }
   }
   h1 {

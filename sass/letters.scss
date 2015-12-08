@@ -1,0 +1,173 @@
+.letter-holder {
+  position:relative;
+  > div {
+    position:absolute;
+    pointer-events:none;
+
+    > span {
+      display:block;
+      position:absolute;
+      left: 0;
+      top: 0;
+      width:100%;
+      height:100%;
+      background-size:100% 400%;
+      &.s2 {
+        background-position: 0 -100%;
+      }
+      &.s3 {
+        background-position: 0 -200%;
+      }
+      &.s4 {
+        background-position: 0 -300%;
+      }
+    }
+  }
+}
+
+@mixin letterMaker($list,$name) {
+  @each $letter in ($list) {
+    .#{$letter} {
+      > span {
+        background-image: url(../assets/imgs/#{$name}-#{$letter}-sprite.png);
+      }
+    }
+  }
+}
+#contact {
+  $contact-letter: 'c' 'o' 'n' 't' 'a' 'c-2' 't';
+  @include letterMaker($contact-letter,'contact');
+}
+#space {
+  $space-letter: 's' 'p' 'a' 'c' 'e';
+  @include letterMaker($space-letter,'space');
+}
+#location-letters {
+  $location-letters: 'l' 'o' 'c' 'a' 't' 'i' 'o-2' 'n';
+  @include letterMaker($location-letters,'location')
+}
+#welcome {
+  $welcome-letters: 'w' 'e-1' 'l' 'c' 'o' 'm' 'e';
+  @include letterMaker($welcome-letters,"welcome");
+  /*
+  .w {
+    > span {
+      background-image: url(../assets/imgs/welcome-w-sprite.png);
+    }
+  }
+  .e-1, .e {
+    > span {
+      background-image: url(../assets/imgs/welcome-e-sprite.png);
+    }
+  }
+  .l {
+    > span {
+      background-image: url(../assets/imgs/welcome-l-sprite.png);
+    }
+  }
+  .c {
+    > span {
+      background-image: url(../assets/imgs/welcome-c-sprite.png);
+    }
+  }
+  .o {
+    > span {
+      background-image: url(../assets/imgs/welcome-o-sprite.png);
+    }
+  }
+  .m {
+    > span {
+      background-image: url(../assets/imgs/welcome-m-sprite.png);
+    }
+  }*/
+}
+.letter-holder > div > span {
+  opacity: 0;
+}
+.letter-holder > div > span:nth-child(1) {
+  opacity:1;
+}
+.letter-holder > div.activated > span:nth-child(1) {
+  opacity: 1;
+  animation: first-frame 1.5s linear 1 ;
+}
+.letter-holder > div.activated > span:nth-child(2) {
+  animation: second-frame 1.5s linear 1;
+}
+.letter-holder > div.activated > span:nth-child(3) {
+  animation: third-frame 1.5s linear 1;
+}
+.letter-holder > div.activated > span:nth-child(4) {
+  animation: fourth-frame 1.5s linear 1;
+}
+
+
+/*ANIMATIONS*/
+@keyframes first-frame {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity:0;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes second-frame {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes third-frame {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity:0;
+  }
+  50% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fourth-frame {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity:0;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
