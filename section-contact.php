@@ -4,49 +4,49 @@ $contact = get_page_by_title('Contact Section');
 ?>
 <div class="container-1200"style="padding:0;">
   <div class="letter-holder aspecter" data-basewidth="1200" id="contact" style="padding:0;">
-    <div class="letter c" style="width:50em; height: 87em; top: 170em; left: 70em;">
+    <div class="letter c" style="width:50em; height: 87em; top: 150em; left: 70em;" data-anchor-target="section#contact" data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-100px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter o" style="width:57em; height: 87em; top: 320em; left: 70em;">
+    <div class="letter o" style="width:57em; height: 87em; top: 320em; left: 70em;" data-anchor-target="section#contact" data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-100px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter n" style="width:49em; height: 81em; top: 320em; left: 265em;">
+    <div class="letter n" style="width:49em; height: 81em; top: 320em; left: 265em;"data-anchor-target="section#contact"  data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-150px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter t" style="width:45em; height: 84em; top: 320em; left: 480em;">
+    <div class="letter t" style="width:45em; height: 84em; top: 320em; left: 480em;"data-anchor-target="section#contact" data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-200px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter a" style="width:50em; height: 85em; top: 420em; right: 470em;">
+    <div class="letter a" style="width:50em; height: 85em; top: 420em; right: 470em;"data-anchor-target="section#contact" data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-100px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter c-2" style="width:50em; height: 87em; top: 420em; right: 274em;">
+    <div class="letter c-2" style="width:50em; height: 87em; top: 420em; right: 274em;"data-anchor-target="section#contact" data-bottom-bottom="transform:translateY(0px)" data-bottom-top="transform: translateY(-250px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>
       <span class="s4"></span>
     </div>
 
-    <div class="letter t" style="width:50em; height: 87em; top: 420em; right: 45em;">
+    <div class="letter t" style="width:50em; height: 87em; top: 420em; right: 45em;" data-bottom-top="transform:translateY(0px)" data-top-bottom="transform: translateY(100px)">
       <span class="s1"></span>
       <span class="s2"></span>
       <span class="s3"></span>

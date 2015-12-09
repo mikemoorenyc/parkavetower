@@ -3,7 +3,7 @@ function cardMaker($ID, $metaName) {
 
   $cardArray = get_post_meta( $ID, $metaName, true );
   if(is_array($cardArray ) && count($cardArray) > 0):?>
-  <div class="cardStack">
+  <div class="cardStack clearfix">
   <?php
     foreach($cardArray as $card) :
     ?>

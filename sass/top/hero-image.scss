@@ -6,6 +6,8 @@
   padding-top: percentage(216/320);
   z-index:1;
   @media($dt) {
-    padding-top:percentage(550/1200);
+    //padding-top:percentage(550/1200);
+    padding-top: 0;
+    height: 550px;
   }
 }

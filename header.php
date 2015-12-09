@@ -129,13 +129,13 @@ else: ?>
 
 <div id="fader-backgrounds">
 
-  <div id="bwb-bg" data-anchor-target=".bwb-graphic" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" ></div>
+  <div id="bwb-bg" data-anchor-target="#building-within-a-building .copy-container" data-start="opacity:0;" data-bottom-top="opacity:0" data-top-top="opacity: 1;" ></div>
   <div id="trans-bg" data-anchor-target=".bwb-gallery .cardStack" data-start="opacity:0;" data-center-top="opacity:0" data-top-top="opacity: 1;" style="background:black;"></div>
   <div id="penthouse-bg" data-anchor-target="#penthouse" data-bottom-top="opacity:0;" data-top-top="opacity: 1;" ></div>
   <div id="trans-bg" data-anchor-target="#club" data-start="opacity:0;" data-bottom-top="opacity:0" data-center-top="opacity: 1;" style="background:black;"></div>
-  <div id="workspace-intro" data-anchor-target=".reimagined-cards .cardStack" data-start="opacity:0;" data-center-top="opacity:0;" data-top-bottom="opacity:1;" data></div>
-  <div id="workspace-bg" data-anchor-target="#elevation-section .dt-elevation" data-start="opacity:0;" data-bottom-top="opacity:0;" data-center-top="opacity:1;" data></div>
-  <div id="contact-bg" data-anchor-target="#contact" data-start="opacity:0;" data-bottom-top="opacity:0;"  data-bottom-bottom="opacity:1;"></div>
+  <div id="workspace-intro" data-anchor-target="#workspace .copy-container" data-start="opacity:0;" data-bottom-top="opacity:0;" data-center-top="opacity:1;" data></div>
+  <div id="workspace-bg" data-anchor-target=".dt-elevation" data-start="opacity:0;" data-bottom-top="opacity:0;" data-top-top="opacity:1;" ></div>
+  <div id="contact-bg" data-anchor-target="#contact" data-start="opacity:0;" data-center-top="opacity:0;"  data-bottom-bottom="opacity:1;"></div>
 </div>
 
 

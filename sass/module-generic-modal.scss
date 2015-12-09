@@ -1,0 +1,104 @@
+html.__modal-opened {
+  overflow-y: hidden;
+}
+
+#generic-modal, .generic-modal {
+  position:fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($black,.9);
+  z-index:11;
+  overflow:hidden;
+  /*opacity: 0;
+  transform:translateX(-100%);
+  transition: transform 0s $ts, opacity $ts;*/
+  display:none;
+  &.image-loaded, &.loaded {
+    .spinner {
+      opacity: 0;
+    }
+    .container {
+      opacity:1;
+    }
+  }
+  //SINGLE IMAGE
+  &.single-image {
+      background:black;
+    .container {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+  &.pan-zoom {
+    .container {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      img {
+        margin: 0;
+        max-width: none;
+        //margin: 0 auto;
+      }
+    }
+  }
+  .container {
+    opacity: 0;
+    transition: opacity $ts;
+  }
+  .modal-close {
+    position:absolute;
+    right: 0;
+    top: 0;
+    @media(min-width:1000px) {
+      right: 50px;
+      top: 50px;
+    }
+
+    width: 50px;
+    height: 50px;
+    background: black;
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width:26px;
+      height: 26px;
+      > * {
+        fill: $teal-dark;
+      }
+    }
+  }
+
+
+  .spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    transition: opacity $ts;
+    animation: spinner 2s linear infinite;
+    svg {
+      width: 30px;
+      height: 30px;
+      > * {
+        fill: $white;
+      }
+    }
+  }
+}

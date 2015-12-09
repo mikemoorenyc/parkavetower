@@ -1,4 +1,8 @@
 #location {
+  .map-container {
+    cursor: zoom-in;
+    display:block;
+  }
   .top-copy {
     padding-top: 70px;
     @media($dt) {
@@ -25,10 +29,10 @@
     margin: 0 percentage(12/320);
     padding-top: 35px;
     * {
-      cursor: ew-resize;
+    //  cursor: ew-resize;
     }
     .slider {
-      cursor:ew-resize;
+    //  cursor:ew-resize;
     }
     @media($dt) {
       padding-top: 150px;
@@ -36,6 +40,10 @@
     }
     .slide {
       float: left;
+      cursor: pointer;
+      &.slick-active {
+        cursor:default;
+      }
       .img-container {
         position:relative;
         display:inline-block;

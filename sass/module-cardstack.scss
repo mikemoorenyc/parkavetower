@@ -1,6 +1,14 @@
 .cardStack {
-  .card > {
-    .inner {
+  //width: 9999em;
+  opacity: 0;
+  transition: opacity $ts;
+  &.__loaded {
+    opacity: 1;
+  }
+  .card {
+    float:left;
+    //width:100vw;
+    >.inner {
       position:relative;
       display:inline-block;
       vertical-align: top;

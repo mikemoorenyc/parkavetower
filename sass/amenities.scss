@@ -12,7 +12,11 @@
       &:first-child {
         padding-top: 0;
       }
-      h2 {
+      img {
+        width: 100%;
+      }
+      .title {
+        display:block;
         text-align: left;
         margin: 5px 0 0 0;
         padding: 0 percentage(12/320);

@@ -1,20 +1,7 @@
 
-html.__modal-opened {
-  overflow-y: hidden;
-}
+
 #workspace-modal {
-  position:fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba($black,.9);
-  z-index:11;
-  overflow:hidden;
-  /*opacity: 0;
-  transform:translateX(-100%);
-  transition: transform 0s $ts, opacity $ts;*/
-  display:none;
+
 
   html.__modal-opened & {
     /*opacity: 1;
@@ -39,21 +26,7 @@ html.__modal-opened {
     max-width:1200px;
     transform: translateX(-50%);
   }
-  .spinner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform:translate(-50%,-50%);
-    transition: opacity $ts;
-    animation: spinner 2s linear infinite;
-    svg {
-      width: 30px;
-      height: 30px;
-      > * {
-        fill: $white;
-      }
-    }
-  }
+
   .words {
     position:absolute;
     width: 295px;
@@ -116,18 +89,7 @@ html.__modal-opened {
     }
   }
 
-  .modal-close {
-    position:absolute;
-    right: percentage(57/1200);
-    top: 60px;
-    svg {
-      width:26px;
-      height: 26px;
-      > * {
-        fill: $teal-dark;
-      }
-    }
-  }
+  
 }
 
 

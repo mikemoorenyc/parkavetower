@@ -14,8 +14,9 @@ function lazyLoad() {
       }
       $(img).attr('src',realSrc);
     }
-    $(img).load(function(){
+    $(img).one('load',function(){
       loaded++;
+      
       if(loaded == loadCount) {
         imagesLoaded = true;
         console.log('all images loaded');

@@ -1,6 +1,13 @@
 @import 'variables.scss';
 $imgDir: '../assets/imgs';
 @import 'mixins.scss';
+
+// MODULES
+@import 'module-dl-btn.scss';
+@import 'module-cardstack.scss';
+@import 'module-generic-modal.scss';
+
+
 @import 'bwb.scss';
 @import 'slick.scss';
 @import 'penthouse.scss';
@@ -13,9 +20,7 @@ $imgDir: '../assets/imgs';
 @import 'amenities-gal-expanded.scss';
 @import 'skrollr.scss';
 @import 'letters.scss';
-// MODULES
-@import 'module-dl-btn.scss';
-@import 'module-cardstack.scss';
+
 
 #css-checker {
   height: 1px;

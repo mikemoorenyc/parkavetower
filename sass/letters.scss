@@ -1,5 +1,8 @@
 .letter-holder {
   position:relative;
+  @media(max-width:1000px) {
+    display:none;
+  }
   > div {
     position:absolute;
     pointer-events:none;
@@ -45,6 +48,10 @@
 #location-letters {
   $location-letters: 'l' 'o' 'c' 'a' 't' 'i' 'o-2' 'n';
   @include letterMaker($location-letters,'location')
+}
+#club-letters {
+  $club-letters: 'c' 'l' 'u' 'b';
+  @include letterMaker($club-letters,'club')
 }
 #welcome {
   $welcome-letters: 'w' 'e-1' 'l' 'c' 'o' 'm' 'e';

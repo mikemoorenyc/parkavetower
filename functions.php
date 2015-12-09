@@ -12,7 +12,7 @@ remove_action('wp_head', 'wp_generator');// Removes the WordPress version as a l
 
 add_theme_support('post-thumbnails');
 
-
+add_image_size ( 'fake-full', 2200 , 2200 , false ) ;
 
 
 add_action( 'admin_init', 'my_theme_add_editor_styles' );

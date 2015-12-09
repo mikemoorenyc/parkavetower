@@ -4,35 +4,35 @@ include 'section-reimagined.php';
 <section id="workspace" class=>
 <div class="container-1200">
 <div class="letter-holder aspecter" id="space" data-basewidth="1200">
-  <div class="letter s" style="width:48em; height: 85em; top: 205em; left: 58em;">
+  <div class="letter s" style="width:48em; height: 85em; top: 205em; left: 58em;" data-bottom-top="transform:translateY(100px)" data-center-center="transform:translateY(0px);"data-top-bottom="transform: translateY(-100px)" data-anchor-target="section#workspace .copy-container">
     <span class="s1"></span>
     <span class="s2"></span>
     <span class="s3"></span>
     <span class="s4"></span>
   </div>
 
-  <div class="letter p" style="width:47em; height: 82em; top: 205em; left: 295em;">
+  <div class="letter p" style="width:47em; height: 82em; top: 205em; left: 295em;" data-bottom-top="transform:translateY(250px)" data-top-bottom="transform: translateY(-250px)" data-center-center="transform:translateY(0px)"data-anchor-target="section#workspace .copy-container">
     <span class="s1"></span>
     <span class="s2"></span>
     <span class="s3"></span>
     <span class="s4"></span>
   </div>
 
-  <div class="letter a" style="width:52em; height: 81em; top: 360em; left: 437em;">
+  <div class="letter a" style="width:52em; height: 81em; top: 360em; left: 437em;" data-bottom-top="transform:translateY(-150px)" data-top-bottom="transform: translateY(150px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
     <span class="s1"></span>
     <span class="s2"></span>
     <span class="s3"></span>
     <span class="s4"></span>
   </div>
 
-  <div class="letter c" style="width:50em; height: 87em; top: 360em; right:453em;">
+  <div class="letter c" style="width:50em; height: 87em; top: 360em; right:453em;" data-bottom-top="transform:translateY(-50px)" data-top-bottom="transform: translateY(50px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
     <span class="s1"></span>
     <span class="s2"></span>
     <span class="s3"></span>
     <span class="s4"></span>
   </div>
 
-  <div class="letter e" style="width:50em; height: 79em; top: 505em; right:70em;">
+  <div class="letter e" style="width:50em; height: 79em; top: 505em; right:70em;" data-bottom-top="transform:translateY(150px)" data-top-bottom="transform: translateY(-150px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
     <span class="s1"></span>
     <span class="s2"></span>
     <span class="s3"></span>
@@ -233,7 +233,7 @@ $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
 </div>
 
 
-<div id="workspace-modal">
+<div id="workspace-modal" class="generic-modal">
   <div class="inner">
     <div class="words">
       <h2 class="sm">Building Within A Building</h2>
@@ -251,12 +251,13 @@ $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
 
     </div>
 
-    <a href="#" class="modal-close">
-      <svg>
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cross97"></use>
-      </svg>
-    </a>
+
   </div>
+  <a href="#" class="modal-close">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cross97"></use>
+    </svg>
+  </a>
 </div>
 
 

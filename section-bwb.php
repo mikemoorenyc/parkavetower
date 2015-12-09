@@ -82,8 +82,8 @@
       </div>
 
     </div>
-    <div id="penthouse-gallery">
-      <div class="slider">
+    <div id="penthouse-gallery"data-start="opacity:1;" data-top-center="opacity:1;" data-top-bottom="opacity:0;">
+      <div class="slider" >
         <?php
         $pimages = get_post_meta( $penthouse->ID, 'penthouse-images', true );
         $pimages = $pimages[0];

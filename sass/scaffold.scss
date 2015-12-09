@@ -17,11 +17,12 @@ body {
   color: $white;
   background-color: $black;
   font-weight: normal;
-  -webkit-font-smoothing: antialiased!important;
+//  -webkit-font-smoothing: antialiased!important;
   -webkit-text-size-adjust: none;
   letter-spacing: $lt-normal;
     font-weight:300;
   text-align: center;
+  height: auto !important;
   @media($dt) {
     font-size: 16px;
   }

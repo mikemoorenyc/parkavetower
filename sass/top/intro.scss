@@ -6,7 +6,7 @@
   }
   .copy-container {
     @media($dt) {
-      max-width:700px;
+      max-width:750px;
     }
   }
   p {
@@ -38,7 +38,7 @@
       margin: 0 auto;
       padding: 0;
       height: 500px;
-      box-shadow: 0 3px 7px rgba(black,.5);
+    //  box-shadow: 0 3px 7px rgba(black,.5);
     }
     iframe {
       display:block;
