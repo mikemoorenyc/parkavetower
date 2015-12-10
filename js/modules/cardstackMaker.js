@@ -5,14 +5,21 @@ function cardstackMaker() {
     var cardLength = cards.length;
     var cardsLoaded = 0;
     var slickSettings = {
-      arrows: false,
+      nextArrow: '<button type="button" class="slick-next"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
+      prevArrow: '<button type="button" class="slick-prev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
       speed: ts
     }
+    $(stack).on('init',function(){
+      if(typeof skroll !== 'undefined') {
+        skroll.refresh();
+      }
+      $(stack).addClass('__loaded');
+    });
     $(cards).each(function(){
       $(this).one('load',function(){
         cardsLoaded++;
         if(cardsLoaded == 1) {
-          $(stack).slick(slickSettings).addClass('__loaded')
+          $(stack).slick(slickSettings);
         }
         if(cardsLoaded == cardLength) {
           //$(stack).slick('unslick');

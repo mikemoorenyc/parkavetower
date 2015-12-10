@@ -16,7 +16,11 @@ function lazyLoad() {
     }
     $(img).one('load',function(){
       loaded++;
-      
+
+      if(typeof skroll !== 'undefined') {
+        skroll.refresh();
+      }
+
       if(loaded == loadCount) {
         imagesLoaded = true;
         console.log('all images loaded');

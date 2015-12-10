@@ -19,7 +19,7 @@ gulp.task('sass', function () {
     mqpacker
   ];
 
-  gulp.src(['sass/main.scss', 'sass/expanded.scss','sass/ie-fixes.scss','sass/editor-styles.scss'])
+  gulp.src(['sass/main.scss', 'sass/expanded.scss','sass/ie-fixes.scss','sass/editor-styles.scss', 'sass/letters.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(minifyCSS({keepBreaks:false, keepSpecialComments: 0}))

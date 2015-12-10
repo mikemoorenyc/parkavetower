@@ -94,6 +94,7 @@ function siteInit() {
     var img = $(hi).find('img');
     var theSrc;
     $(img).one('load',function(){
+      $('body').append('<link rel="stylesheet" href="'+siteDir+'/css/letters.css" media="all">'); 
       if($('html').hasClass('__assets-loaded') == false) {
         $('#load-cover').fadeOut(ts);
       }
@@ -126,13 +127,15 @@ function siteInit() {
   pageLoader();
   aspecter();
 
-  cardstackMaker();
-  lazyLoad();
+
   //scrollMagic();
   //TURN ON SKROLLR
   if(mobileDetector == false) {
     skroll = skrollr.init();
   }
+
+  cardstackMaker();
+  lazyLoad();
 
 
 

@@ -77,7 +77,7 @@
     $mapurl = wp_get_attachment_image_src($locationid, 'fake-full', false);
     $mapurl = $mapurl[0];
     ?>
-    <a class="map-container generic-module-popper" href="<?php echo $mapurl;?>" data-function="genericModulePanZoom">
+    <a class="map-container generic-module-popper" href="<?php echo $mapurl;?>" data-function="genericModulePanZoom" title="Enlarge">
       <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/map-full.png" data-mob="<?php echo $siteDir;?>/assets/imgs/map-full.png" />
 
     </a>
@@ -93,9 +93,10 @@
       <?php foreach($locgal as $loc):?>
 
         <div class="slide">
+
           <div class="title hide">
           <?php
-          if($title !== '') {
+          if($loc['title'] !== '') {
             echo $loc['title'];
           } else {
             echo '&nbsp;';

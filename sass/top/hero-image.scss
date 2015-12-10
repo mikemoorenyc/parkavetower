@@ -2,12 +2,12 @@
   position:relative;
   width: 100%;
   background-size:cover;
-  background-position:center center;
+  background-position:top center;
   padding-top: percentage(216/320);
   z-index:1;
   @media($dt) {
-    //padding-top:percentage(550/1200);
-    padding-top: 0;
-    height: 550px;
+    padding-top:percentage(1035/2000);
+    //padding-top: 0;
+    //height: 550px;
   }
 }
