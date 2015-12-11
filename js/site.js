@@ -73,10 +73,12 @@ function siteInit() {
   //MENU
   $('a.menu-open').click(function(){
     $('html').addClass('__menu-opened');
+    $('.navigation-wrapper').fadeIn(ts);
     return false;
   });
   $('a.menu-close').click(function(){
     $('html').removeClass('__menu-opened');
+    $('.navigation-wrapper').fadeOut(ts);
     return false;
   });
 
@@ -94,7 +96,7 @@ function siteInit() {
     var img = $(hi).find('img');
     var theSrc;
     $(img).one('load',function(){
-      $('body').append('<link rel="stylesheet" href="'+siteDir+'/css/letters.css" media="all">'); 
+      $('body').append('<link rel="stylesheet" href="'+siteDir+'/css/letters.css" media="all">');
       if($('html').hasClass('__assets-loaded') == false) {
         $('#load-cover').fadeOut(ts);
       }
@@ -133,6 +135,15 @@ function siteInit() {
   if(mobileDetector == false) {
     skroll = skrollr.init();
   }
+
+  //WHEN HEIGHT RESHIFT ALL POSITIONS
+  new ResizeSensor($('body'), function(){
+    console.log('height change');
+    backgroundGradient();
+    if(typeof skroll !== 'undefined') {
+      skroll.refresh();
+    }
+  });
 
   cardstackMaker();
   lazyLoad();
@@ -232,9 +243,7 @@ function getScrollbarWidth() {
     $('body').append('<style>html.__modal-opened body, html.__modal-opened header{ padding-right: '+(widthNoScroll - widthWithScroll)+'px }</style>');
 }
 
-$(window).resize(function(){
-  backgroundGradient();
-});
+
 
 
 
