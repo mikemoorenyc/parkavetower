@@ -162,7 +162,7 @@ function siteInit() {
 
 
   $("header").headroom({
-    "tolerance": 50,
+    "tolerance": 0,
     "offset": $("header").height()
   });
 
