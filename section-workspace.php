@@ -65,9 +65,9 @@ include 'section-reimagined.php';
 
       </span>
 
-      <img class="lazy-load mob-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" data-mob="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" />
+    <!--  <img class="lazy-load mob-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" data-mob="<?php echo $siteDir;?>/assets/imgs/mobile-elevation.png" />-->
 
-      <div class="dt-elevation">
+      <div class="dt-elevation aspecter" data-basewidth="290">
       <div class="cutter">
         <div class="lights">
           <?php
@@ -78,6 +78,67 @@ include 'section-reimagined.php';
             <?php
           }
           ?>
+        </div>
+        <div class="avail-list">
+          <?php
+          $list = get_post_meta( $workspace->ID, 'avail-list', true );
+          $listArray = array();
+          foreach($list as $l) {
+            array_push($listArray, array(
+              'fl' => intval($l['fl-number']),
+              'sq' => $l['sq']
+            ));
+          }
+
+          usort($listArray, function($a, $b) {
+            return $a['fl'] - $b['fl'];
+          });
+          $listArray = array_reverse($listArray);
+
+
+
+
+           /*foreach($listArray as $la) {
+             ?>
+             <div class="list-item fl-<?php echo $la['fl'];?>">
+               <span class="rsf"><?php echo $la['sq'];?></span>
+               <span class="label">&nbsp;&nbsp;RSF</span>
+
+             </div>
+             <?php
+           }
+           */
+           for($l = 36; $l > 1; $l--) {
+             ?>
+
+               <?php
+               $sq = '';
+               foreach($listArray as $la) {
+                 if($la['fl'] == $l) {
+                   $sq = $la['sq'];
+                 }
+               }
+               if($sq !== '') {
+                 ?>
+                 <a class="list-item fl-<?php echo $l;?>">
+                 <span class="rsf"><?php echo $sq;?></span>
+                 <span class="label">&nbsp;&nbsp;RSF</span>
+                </a>
+                 <?php
+               } else {
+                 ?>
+                 <a class="list-item fl-<?php echo $l;?> no-show">
+                   &nbsp;
+                 </a>
+                 <?php
+               }
+               ?>
+
+             <?php
+           }
+
+          ?>
+
         </div>
         <div class="hilights">
           <a href="#" class="bwb"></a>
@@ -92,12 +153,12 @@ include 'section-reimagined.php';
         </div>
 
 
-        <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/dt-elevation.png" data-mob="<?php echo $siteDir;?>/assets/imgs/dt-elevation.png" />
+        <img class="lazy-load main-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/elevation-truefit.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevation-truefit.png" />
 
         <div class="e-labels">
-          <span class="e-1">Elevator 1</span>
-          <span class="e-2">Elevator 2</span>
-          <span class="e-3">Elevator 3</span>
+          <span class="e-1"><span>Elevator 1</span></span>
+          <span class="e-2"><span>Elevator 2</span></span>
+          <span class="e-3"><span>Elevator 3</span></span>
 
         </div>
       </div>

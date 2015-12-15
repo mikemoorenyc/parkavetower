@@ -21,17 +21,54 @@
     }
   }
   .dt-elevation {
-    display:none;
-    @media($dt) {
-      display:inline-block;
+    $e-wide : 'min-width:710px';
+    //display:none;
+  //  width: 292px;
+    height:648em;
+    margin: 0 auto;
+    width: 100% - (percentage(12/320)*2);
+    max-width: 410px;
+
+      //display:inline-block;
       position:relative;
       .cutter {
         overflow:hidden;
         position:relative;
+        height:100%;
       }
-      img {
-        pointer-events: none;
-        position:relative;
+       img.main-elevation {
+         pointer-events: none;
+         position:absolute;
+         left: 0;
+         top: 0;
+         width: 271em;
+         height: 100%;
+      }
+      .avail-list {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top:78em;
+        .list-item {
+          //position: absolute;
+          //right: 0;
+          //top: 78em;
+          text-align:right;
+          line-height:15em;
+          white-space: nowrap;
+          display:block;
+          &.no-show {
+            visibility: hidden;
+            pointer-events: none;
+          }
+          span {
+            font-size: 7em;
+            color: #15423a;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+
+        }
       }
       //LIGHTS
       //OPACITY .47
@@ -169,7 +206,7 @@
       .elevator-imgs {
         position:absolute;
         left: 0;
-        bottom:4px;
+        bottom:1em;
         width:100%;
         height:100%;
         overflow:hidden;
@@ -180,46 +217,56 @@
           bottom: 0px;
           transform:translateY(100%);
           transition: transform $ts;
+          width:12em;
           &.__activated {
             transform:translateY(0);
           }
           &.e-1 {
-            left: 256px;
+            left: 134em;
+            height:159em;
           }
           &.e-2 {
-            left: 277px;
+            left: 134em + 15em;
+            height:264em;
           }
           &.e-3 {
-            left: 298px;
+            left: 134em + 15em + 16em;
+            height:569em;
           }
         }
       }
       .e-labels {
 
-
-        span {
+        display:none;
+        @media($e-wide) {
+          display:block;
+        }
+        > span {
           opacity: 0;
           transition: opacity $ts;
           display:block;
           position: absolute;
-          left: 265px;
-          bottom: 30px;
+          left: 134em + 8em;
+          bottom: 20em;
           color: $white;
-          font-size: 9px;
+          white-space: nowrap;
           font-weight: bold;
           text-transform:uppercase;
-          line-height: 15px;
+          line-height: 12em;
           transform-origin: left center;
           transform: rotate(-90deg);
           pointer-events:none;
+          > span {
+            font-size: 7em;
+          }
           &.__activated {
             opacity: 1;
           }
           &.e-2 {
-            left: 285px;
+            left: 134em + 8em + 15em;
           }
           &.e-3 {
-            left: 306px;
+            left: 134em + 8em + 15em + 15em;
           }
         }
       }
@@ -291,7 +338,7 @@
           }
         }
       }
-    }
+
 
 
   }
