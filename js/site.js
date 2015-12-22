@@ -71,6 +71,8 @@ function siteInit() {
     orientationClass();
   });
 
+    getScrollbarWidth();
+
   //theHistory();
 
 
@@ -202,7 +204,7 @@ function initializer() {
   viewMaker();
   aspecter();
   backgroundGradient();
-  getScrollbarWidth();
+
   if(mobileDetector == false) {
     skroll.refresh();
   }
