@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 105px percentage(12/320) 0 percentage(12/320);
   .slide-container {
-    padding: 20px 0;
+    padding: 0px 0;
     position:relative;
     text-align:left;
     .inner {
@@ -28,6 +28,10 @@
           .title .inner {
             transform: translateX(-50px);
           }
+          .hover-state {
+            opacity: 1;
+            transform: translate(-50%,-50%) rotate(90deg);
+          }
       }
     }
     &:nth-child(even) {
@@ -48,6 +52,30 @@
         width: 100%;
         transition: opacity $ts;
         position:relative !important;
+      }
+      .hover-state {
+        width: 75px;
+        height: 75px;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition:all $ts;
+        display:block;
+        svg {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 35px;
+          height: 35px;
+          * {
+            fill: white;
+          }
+        }
       }
     }
     .title {
@@ -90,6 +118,9 @@
       .img-holder {
         margin-left: 9.5%;
         width: 47%;
+        img {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.11);
+        }
       }
       .title {
         width: 100% - (47%+9.5%);
@@ -102,6 +133,9 @@
       z-index:3;
       .img-holder {
         width:62.5%;
+        img {
+           box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.11);
+        }
       }
       .title {
         width: 100% - 62.5%;
@@ -114,6 +148,9 @@
 
       .img-holder {
         width: 63%;
+        img {
+          box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.11);
+        }
       }
       .title {
         width: 100% - 63%;
@@ -124,6 +161,9 @@
       z-index:1;
       .img-holder {
         width: 41.5%;
+        img {
+          box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.11);
+        }
       }
       .title {
         width: 100% - 41.5%;

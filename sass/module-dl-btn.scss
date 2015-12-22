@@ -1,11 +1,13 @@
 .btn-dl {
+  $btnt: $ts*1.35;
   display:inline-block;
   min-width: 220px;
   text-align: center;
   line-height:58px;
   padding: 0 10px;
   border: 1px solid $black;
-  transition: border-color $ts;
+  transition: border-color $btnt;
+  position:relative;
   > * {
     display:inline-block;
     vertical-align: middle;
@@ -15,7 +17,7 @@
     height: 18px;
     > * {
       fill: $white;
-      transition: fill $ts;
+      transition: fill $btnt;
     }
   }
   .copy {
@@ -25,18 +27,101 @@
     margin-left: 2px;
     color: $white;
     font-size: 14px;
-    transition:color $ts;
+    transition:color $btnt;
   }
   &:hover {
-    border-color: $white;
+    //border-color: $white;
     .copy {
-      color:$black;
+    //  color:$black;
     }
     svg {
       > * {
-        fill: $black;
+      //  fill: $black;
       }
     }
 
   }
+  &:before, &:after {
+    display:block;
+    content: '';
+    position:absolute;
+  }
+  &:before {
+    border-right: 1px solid white;
+    right:-1px;
+    top: -1px;
+    bottom:-1px;
+    transform-origin: top right;
+  }
+  &:after {
+    border-bottom:1px solid white;
+    right:-1px;
+    bottom:-1px;
+    left:-1px;
+    transform-origin:bottom right;
+  }
+  .hover-state {
+    position:absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    &:after, &:before {
+      display:block;
+      content: '';
+      position:absolute;
+    }
+    &:after {
+      left:-1px;
+      bottom:-1px;
+      top:-1px;
+      border-left: 1px solid white;
+      transform-origin: bottom left;
+
+    }
+    &:before {
+      transform-origin: top left;
+      left: -1px;
+      top: -1px;
+      right:-1px;
+      border-top: 1px solid white;
+    }
+  }
+  &:after, &:before, .hover-state:before, .hover-state:after {
+    transition: transform linear $btnt/4;
+  }
+  .hover-state:after {
+    transition-delay: ($btnt/4) *3;
+  }
+  .hover-state:before {
+    transition-delay: ($btnt/4) *2;
+  }
+  &:before {
+    transition-delay: ($btnt/4);
+  }
+  .hover-state:after, &:before {
+    transform: scaleY(0);
+  }
+  .hover-state:before, &:after {
+    transform:scaleX(0);
+  }
+  &:hover, &.active {
+    &:after, &:before, .hover-state:before, .hover-state:after {
+      transform: scale(1);
+    }
+    .hover-state:after {
+      transition-delay: 0s;
+    }
+    .hover-state:before {
+      transition-delay: ($btnt/4)
+    }
+    &:before {
+      transition-delay: ($btnt/4) *2;
+    }
+    &:after {
+      transition-delay: ($btnt/4) *3;
+    }
+  }
+
+
 }

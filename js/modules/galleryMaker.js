@@ -65,13 +65,17 @@ function galleryMaker() {
         centerPadding: '0px',
         focusOnSelect: true,
         mobileFirst: true,
+        adaptiveHeight: true,
          slidesToShow: 1,
          responsive: [
 
            {
              breakpoint:dt,
-             centerMode: false,
-             variableWidth: false
+             settings: {
+
+               autoplay: true,
+               autoplaySpeed: 4000
+             }
            }
          ]
 

@@ -3,7 +3,7 @@
   .container-1200 {
     padding: 85px 0 50px ;
     @media($dt) {
-      padding: 650px 0 65px;
+      padding: 526px 0 65px;
     }
   }
   .copy-container {
@@ -55,6 +55,7 @@
           text-transform:none;
           margin: 0;
           line-height: 1.5em;
+          display:block;
         }
       }
     }

@@ -7,11 +7,15 @@ function cardstackMaker() {
     var slickSettings = {
       nextArrow: '<button type="button" class="slick-next"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
       prevArrow: '<button type="button" class="slick-prev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
+      arrows: false,
+      dots: true,
       speed: ts,
-      adaptiveHeight: true
+      //adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 4000
     }
     $(stack).on('init',function(){
-      
+
       $(stack).addClass('__loaded');
     });
     $(cards).each(function(){

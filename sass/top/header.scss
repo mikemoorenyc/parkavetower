@@ -13,7 +13,7 @@ header {
   &.headroom--unpinned {
     transform:translateY(-100%);
   }
-  @media($navB) {
+  @media(min-height:1000px) {
     height: 70px;
   }
   h1.logo {
@@ -30,10 +30,10 @@ header {
       width: 33px;
       height: 35px;
     }
-    @media($navB) {
+    @media(min-height:1000px) {
       padding: 0 55px;
       a, img {
-        width:43px;
+        width:44px;
         height: 47px;
       }
     }
@@ -88,11 +88,17 @@ header {
         padding-right:35px;
         > a {
           display:inline-block;
-          line-height:70px;
+          line-height:50px;
           padding-left: 30px;
           letter-spacing: .15em;
           font-size: 14px;
+          &.active {
+            color: white;
+          }
         }
+      }
+      @media(min-height:1000px) and ($navB) {
+        line-height:70px;
       }
       @media($navMax) {
         position:absolute;

@@ -1,8 +1,8 @@
-#workspace {
+#availabilities {
   > #elevation-section >.container-1200 {
     padding-top: 70px;
     @media($dt) {
-      padding-top:280px;
+      padding-top:575px;
     }
   }
   .elevation {
@@ -27,14 +27,27 @@
     height:648em;
     margin: 0 auto;
     width: 100% - (percentage(12/320)*2);
-    max-width: 410px;
+    max-width: 388px;
 
       //display:inline-block;
       position:relative;
+      @media($e-wide) {
+        left: 120px;
+      }
       .cutter {
         overflow:hidden;
         position:relative;
         height:100%;
+        &:after {
+          position: absolute;
+          display:block;
+          content:'';
+          width:13em;
+          height: 19em;
+          background: black;
+          bottom: 1em;
+          left: 134em;
+        }
       }
        img.main-elevation {
          pointer-events: none;
@@ -43,29 +56,44 @@
          top: 0;
          width: 271em;
          height: 100%;
+         backface-visibility:hidden;
+         @media($e-wide) {
+           top:-1px;
+         }
       }
       .avail-list {
         position: absolute;
         right: 0;
         top: 0;
-        padding-top:78em;
+        padding-top:78.8em;
         .list-item {
           //position: absolute;
           //right: 0;
           //top: 78em;
           text-align:right;
-          line-height:15em;
+          height:15.2em;
+
+          line-height:15.2em;
           white-space: nowrap;
           display:block;
+          a {
+            display:block;
+          }
           &.no-show {
             visibility: hidden;
             pointer-events: none;
           }
           span {
-            font-size: 7em;
-            color: #15423a;
+            font-size: 7.5em;
+            color: black;
             text-transform: uppercase;
             font-weight: bold;
+          }
+          &.fl-13 {
+            display:none;
+          }
+          &.fl-27 {
+          //  height:15.5em;
           }
 
         }
@@ -74,139 +102,147 @@
       //OPACITY .47
       .lights {
         position:absolute;
-        width: 500px;
+        width: 193em;
 
-        left: 80px;
-        top: 2px;
+        left: 0em;
+        top: 0em;
         div {
-          height: 20px;
+          height: 15em;
           position:relative;
           background: white;
-          left: 48px;
-          width:206px;
+          left: 37em;
+          width:156em;
           opacity: 0;
           &.__activated {
             animation: hilighter .5s linear 1 ;
           }
           &.fl-45 {
             position: absolute;
-            top: 7px;
-            left: 130px;
-            width: 41px;
-            height: 22px;
+            top: 6.5em;
+            left: 101.5em;
+            width: 28em;
+            height: 16em;
             background: url('#{$imgDir}/fl-light.png') top left no-repeat;
-            background-size: cover;
+            background-size: 100% 100%;
             z-index:1;
             transition: opacity $ts ;
             animation: none;
+            border: 0;
             &.__activated {
               opacity: .47;
             }
           }
           &.fl-44 {
-            left: 121px;
-            width:61px;
-            height: 31px;
+            left: 93em;
+            width:46em;
+            height: 25em;
             background: url('#{$imgDir}/fl-43.png') top left no-repeat;
-            background-size: cover;
+            background-size: 100% 100%;
+            border: 0;
+
           }
           &.fl-43 {
-            width:60px;
-            height:7px;
+            width:48em;
+            height:5em;
             background:white;
-            left: 122px;
+            left: 91em;
+
             &:before {
               display:block;
               content:'';
               position:absolute;
-              left: -7px;
+              left: -4.5em;
               top: 0;
               border-style: solid;
-              border-width: 0 0px 7px 7px;
+              border-width: 0 0px 5em 5em;
               border-color: transparent transparent white transparent;
             }
             &:after{
               display:block;
               content:'';
               position:absolute;
-              right: -7px;
+              right: -4em;
               top: 0;
               border-style: solid;
-              border-width: 0 7px 7px 0px;
+              border-width: 0 5em 5em 0px;
               border-color: transparent transparent white transparent;
             }
           }
           &.fl-42 {
-            width:75px;
-            height:15px;
+            width:58em;
+            height:12em;
             background:white;
-            left: 114px;
+            left: 86em;
+
             &:before {
               display:block;
               content:'';
               position:absolute;
-              left: -15px;
+              left: -11em;
               top: 0;
               border-style: solid;
-              border-width: 0 0px 15px 15px;
+              border-width: 0 0px 12em 12em;
               border-color: transparent transparent white transparent;
             }
             &:after{
               display:block;
               content:'';
               position:absolute;
-              right: -15px;
+              right: -11em;
               top: 0;
               border-style: solid;
-              border-width: 0 15px 15px 0px;
+              border-width: 0 12em 12em 0px;
               border-color: transparent transparent white transparent;
             }
           }
           &.fl-41 {
             background: white;
-            width: 104px;
-            height: 15px;
-            left: 100px;
+           width:80em;
+            height: 9em;
+            left: 75em;
           }
           &.fl-40 {
-            width:157px;
-            height: 10px;
+            width:116em;
+            height: 7em;
             background: url('#{$imgDir}/fl-42.png') top left no-repeat;
-            background-size: cover;
-            left: 72px;
-            margin-top:-1px;
+            background-size: 100% 100%;
+            left: 57em;
+            //margin-top:-1px;
           }
           &.fl-39 {
-            width:175px;
-            height: 10px;
+            width:130em;
+            height: 8em;
             background: url('#{$imgDir}/fl-41.png') top left no-repeat;
-            background-size: cover;
-            left: 64px;
+            background-size: 100% 100%;
+            left: 50em;
           }
           &.fl-38 {
-            width:207px;
-            height: 16px;
+            width:153em;
+            height: 12.5em;
             background: url('#{$imgDir}/fl-40.png') top left no-repeat;
-            background-size: cover;
-            left: 48px;
+            background-size:100% 100%;
+            left: 38em;
 
           }
           &.fl-35,&.fl-31,&.fl-23,&.fl-19,&.fl-15,&.fl-10,&.fl-8 {
-            height: 21px;
+            height: 16em;
           }
           &.fl-7,&.fl-6,&.fl-5,&.fl-4,&.fl-3,&.fl-2,&.fl-1 {
             left: 0;
-            width:255px;
+            width:193em;
+          }
+          &.fl-6,&.fl-5 {
+            height: 16em;
           }
           &.fl-1 {
-            height: 28px;
+            height: 21em;
           }
         }
       }
       .elevator-imgs {
         position:absolute;
         left: 0;
-        bottom:1em;
+        bottom:1.5em;
         width:100%;
         height:100%;
         overflow:hidden;
@@ -223,15 +259,15 @@
           }
           &.e-1 {
             left: 134em;
-            height:159em;
+            height:157em;
           }
           &.e-2 {
-            left: 134em + 15em;
-            height:264em;
+            left: 134.5em + 15em;
+            height:263em;
           }
           &.e-3 {
             left: 134em + 15em + 16em;
-            height:569em;
+            height:568em;
           }
         }
       }
@@ -248,7 +284,7 @@
           position: absolute;
           left: 134em + 8em;
           bottom: 20em;
-          color: $white;
+          color: black;
           white-space: nowrap;
           font-weight: bold;
           text-transform:uppercase;
@@ -272,33 +308,38 @@
       }
 
       .hilights {
+        display: none;
+        @media($e-wide) {
+          display:block;
+        }
         > a {
           display:block;
           opacity:.0;
           position: absolute;
           cursor:pointer;
           transition: opacity $ts;
+
           &:hover,&.__hovering {
             opacity:.25;
           }
           &.bwb {
-            left: 78px;
+            left: 1px;
             bottom: 2px;
             width:258px;
             height: 413px;
             background: url('#{$imgDir}/bwb-hilight.png');
           }
           &.towerfloors {
-            left: 129px;
-            bottom: (414px);
-            width:205px;
+            left: 50px;
+            bottom: (416px);
+            width:207px;
             height: (264px);
             background: url('#{$imgDir}/towerfloor-hilight.png');
 
           }
           &.penthouse {
-            left: 129px;
-            bottom: (413px+264);
+            left: 50px;
+            bottom: (680px);
             width:208px;
             height: (136px);
             background: url('#{$imgDir}/penthouse-hilight.png');
@@ -308,16 +349,27 @@
       }
       .poplinks {
         position:absolute;
-        right: 420px;
-        top: 90px;
+        left: -20px;
+        bottom: -2px;
         text-align: right;
+        display: none;
+        width: 22px;
+        height: 819px;
+        background: url('#{$imgDir}/poplinks-grid.png') top left no-repeat;
+        background-size: 100% 100%;
+        @media($e-wide) {
+          display:block;
+        }
 
         > li {
+          position: absolute;
+          right: 40px;
+          top: 46px;
           &.towerfloors {
-            padding-top: 160px;
+            top:241px;
           }
           &.bwb {
-            padding-top:256px;
+            top:532px;
           }
           a {
             display:inline-block;

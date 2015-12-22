@@ -1,4 +1,9 @@
 #location {
+  @media($dt) {
+    html.__parallaxed & {
+      margin-top:-250px;
+    }
+  }
   .map-container {
     cursor: zoom-in;
     display:block;
@@ -6,7 +11,7 @@
   .top-copy {
     padding-top: 70px;
     @media($dt) {
-      padding-top:285px;
+      padding-top:560px;
     }
   }
   .map {

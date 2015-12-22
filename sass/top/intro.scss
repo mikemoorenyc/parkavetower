@@ -2,7 +2,7 @@
   padding:40px 0 0;
   position:relative;
   @media($dt) {
-    padding-top: 135px;
+    padding-top: 464px;
   }
   .copy-container {
     @media($dt) {
@@ -10,9 +10,9 @@
     }
   }
   p {
-    color: $teal;
+    //color: $teal;
     @media($dt) {
-      font-size:22px;
+      //font-size:22px;
     }
   }
   h1 {

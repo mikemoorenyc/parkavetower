@@ -1,45 +1,45 @@
 <?php
 include 'section-reimagined.php';
 ?>
-<section id="workspace" class=>
+<section id="availabilities" class=>
 <div class="container-1200">
-<div class="letter-holder aspecter" id="space" data-basewidth="1200">
-  <div class="letter s" style="width:48em; height: 85em; top: 205em; left: 58em;" data-bottom-top="transform:translateY(100px)" data-center-center="transform:translateY(0px);"data-top-bottom="transform: translateY(-100px)" data-anchor-target="section#workspace .copy-container">
-    <span class="s1"></span>
-    <span class="s2"></span>
-    <span class="s3"></span>
-    <span class="s4"></span>
-  </div>
+  <div class="letter-holder aspecter" id="space" data-basewidth="1200" style="top:0px; height:575px;">
+    <div class="letter s" style="width:48em; height: 85em; left:141em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-75px)" data-top-bottom="transform:translateY(75px)" data-anchor-target=".letter-holder#space">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
 
-  <div class="letter p" style="width:47em; height: 82em; top: 205em; left: 295em;" data-bottom-top="transform:translateY(250px)" data-top-bottom="transform: translateY(-250px)" data-center-center="transform:translateY(0px)"data-anchor-target="section#workspace .copy-container">
-    <span class="s1"></span>
-    <span class="s2"></span>
-    <span class="s3"></span>
-    <span class="s4"></span>
-  </div>
+    <div class="letter p" style="width:47em; height: 82em; left:358em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform:translateY(-50px)" data-anchor-target=".letter-holder#space">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
 
-  <div class="letter a" style="width:52em; height: 81em; top: 360em; left: 437em;" data-bottom-top="transform:translateY(-150px)" data-top-bottom="transform: translateY(150px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
-    <span class="s1"></span>
-    <span class="s2"></span>
-    <span class="s3"></span>
-    <span class="s4"></span>
-  </div>
+    <div class="letter a" style="width:52em; height: 81em; left:569em;" >
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
 
-  <div class="letter c" style="width:50em; height: 87em; top: 360em; right:453em;" data-bottom-top="transform:translateY(-50px)" data-top-bottom="transform: translateY(50px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
-    <span class="s1"></span>
-    <span class="s2"></span>
-    <span class="s3"></span>
-    <span class="s4"></span>
-  </div>
+    <div class="letter c" style="width:50em; height: 87em; right:366em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(100px)" data-top-bottom="transform:translateY(-100px)" data-anchor-target=".letter-holder#space">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
 
-  <div class="letter e" style="width:50em; height: 79em; top: 505em; right:70em;" data-bottom-top="transform:translateY(150px)" data-top-bottom="transform: translateY(-150px)" data-anchor-target="section#workspace .copy-container" data-center-center="transform:translateY(0px)">
-    <span class="s1"></span>
-    <span class="s2"></span>
-    <span class="s3"></span>
-    <span class="s4"></span>
-  </div>
+    <div class="letter e" style="width:50em; height: 79em; right:151em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-25px)" data-top-bottom="transform:translateY(25px)" data-anchor-target=".letter-holder#space">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
 
-</div>
+  </div>
 
 </div>
 
@@ -52,7 +52,7 @@ include 'section-reimagined.php';
   ?>
   <div class="copy-container gradientmaker">
     <span class="stops hide">
-      <hr data-amount="0" data-from="below" data-position="top" data-color="#000" />
+      <hr data-amount="0" data-from="below" data-position="top" data-color="#167452" />
 
     </span>
     <?php echo wpautop($workspace->post_content);?>
@@ -61,7 +61,7 @@ include 'section-reimagined.php';
   <div class="elevation">
     <div class="inner gradientmaker scroll-magic" data-scrollfunction="buildingAnimation">
       <span class="stops hide">
-        <hr data-amount="0" data-from="above" data-position="top" data-color="#54c3bb" />
+        <hr data-amount="0" data-from="above" data-position="top" data-color="#167452" />
 
       </span>
 
@@ -84,10 +84,13 @@ include 'section-reimagined.php';
           $list = get_post_meta( $workspace->ID, 'avail-list', true );
           $listArray = array();
           foreach($list as $l) {
-            array_push($listArray, array(
-              'fl' => intval($l['fl-number']),
-              'sq' => $l['sq']
-            ));
+            if($l['hidden'] !== 'hidden') {
+              array_push($listArray, array(
+                'fl' => intval($l['fl-number']),
+                'sq' => $l['sq']
+              ));
+            }
+
           }
 
           usort($listArray, function($a, $b) {
@@ -109,6 +112,15 @@ include 'section-reimagined.php';
            }
            */
            for($l = 36; $l > 1; $l--) {
+             if($l < 20) {
+               $clickClass = 'bwb';
+             }
+             if($l >=20 && $l < 33) {
+               $clickClass = 'towerfloors';
+             }
+             if($l >= 33) {
+               $clickClass = 'penthouse';
+             }
              ?>
 
                <?php
@@ -120,16 +132,18 @@ include 'section-reimagined.php';
                }
                if($sq !== '') {
                  ?>
-                 <a class="list-item fl-<?php echo $l;?>">
+                 <div class="list-item fl-<?php echo $l;?>">
+                 <a class="<?php echo $clickClass;?>" href="">
                  <span class="rsf"><?php echo $sq;?></span>
                  <span class="label">&nbsp;&nbsp;RSF</span>
                 </a>
+                </div>
                  <?php
                } else {
                  ?>
-                 <a class="list-item fl-<?php echo $l;?> no-show">
+                 <div class="list-item fl-<?php echo $l;?> no-show">
                    &nbsp;
-                 </a>
+                 </div>
                  <?php
                }
                ?>
@@ -146,14 +160,16 @@ include 'section-reimagined.php';
           <a href="#" class="penthouse"></a>
         </div>
 
+
+
+
+        <img class="lazy-load main-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/elevation-truefit-black.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevation-truefit-black.png" />
+
         <div class="elevator-imgs">
-          <img class="lazy-load e-1" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-1.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-1.png" />
-          <img class="lazy-load e-2" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-2.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-2.png" />
-          <img class="lazy-load e-3" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-3.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-3.png" />
+          <img class="lazy-load e-1" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-1-new.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-1-new.png" />
+          <img class="lazy-load e-2" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-2-new.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-2-new.png" />
+          <img class="lazy-load e-3" data-dt="<?php echo $siteDir;?>/assets/imgs/elevator-3-new.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevator-3-new.png" />
         </div>
-
-
-        <img class="lazy-load main-elevation" data-dt="<?php echo $siteDir;?>/assets/imgs/elevation-truefit.png" data-mob="<?php echo $siteDir;?>/assets/imgs/elevation-truefit.png" />
 
         <div class="e-labels">
           <span class="e-1"><span>Elevator 1</span></span>
@@ -161,6 +177,7 @@ include 'section-reimagined.php';
           <span class="e-3"><span>Elevator 3</span></span>
 
         </div>
+
       </div>
         <ul class="no-style poplinks">
           <li class="penthouse">
@@ -189,7 +206,7 @@ include 'section-reimagined.php';
   <div id="download-list" class="gradientmaker">
     <span class="stops hide">
 
-      <hr data-amount="100" data-from="above" data-position="bottom" data-color="#54c3bb" />
+      <hr data-amount="100" data-from="above" data-position="bottom" data-color="#167452" />
     </span>
     <?php
     $downloads = get_post_meta( $workspace->ID,'downloads', true );
@@ -198,8 +215,12 @@ include 'section-reimagined.php';
       <?php foreach($downloads as $dl):?>
         <li>
           <?php
+          if($dl['big-file-url']!= false) {
+            $dlurl = $dl['big-file-url'];
+          } else {
+            $dlurl = wp_get_attachment_url( $dl['attachment'], 'full' );
+          }
 
-          $dlurl = wp_get_attachment_url( $dl['attachment'], 'full' );
           $btncopy = $dl['button-copy'];
           ?>
           <a href="<?php echo $dlurl;?>" target="_blank" class="btn-dl">
@@ -232,21 +253,44 @@ $phousefloorplans = get_post_meta( $workspace->ID,'penthouse-floorplans', true )
 $bwbfloorplans = get_post_meta( $workspace->ID,'bwb-floorplans', true );
 $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
 ?>
+<?php
+function imgAndTitle($content) {
+  if($content != false) {
+    return $content;
+  } else {
+    return '&nbsp;';
+  }
+}
 
+?>
 <div class="hide" id="modal-content">
   <div class="penthouse">
-    <div class="title">Penthouse</div>
-    <div class="copy">
-      <?php echo wpautop($modalcopy['penthouse-copy']);?>
-    </div>
+
     <div class="images">
       <?php
       foreach($phousefloorplans as $img){
-        $mobSrc = wp_get_attachment_image_src($img['floorplan'], 'medium', false);
+        echo '<div class="single-img">';
+        $mobSrc = wp_get_attachment_image_src($img['floorplan'], 'large', false);
         $mobSrc = $mobSrc[0];
         ?>
+        <span class="title">
+          <?php
+          $title = imgAndTitle($img['title']);
+          if($title != '&nbsp;' && $img['copy'] != false) {
+            echo $title.'<span class="dash"> - </span>';
+          } else {
+            echo $title;
+          }
+          ?>
+        </span>
+        <span class="copy">
+          <?php
+          echo wpautop(imgAndTitle($img['copy']));
+          ?>
+        </span>
         <hr data-src="<?php echo $mobSrc;?>" />
         <?php
+        echo '</div>';
       }
 
       ?>
@@ -254,18 +298,31 @@ $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
   </div>
 
   <div class="bwb">
-    <div class="title">Building Within A Building</div>
-    <div class="copy">
-      <?php echo wpautop($modalcopy['building-within-a-building-copy']);?>
-    </div>
     <div class="images">
       <?php
       foreach($bwbfloorplans as $img){
-        $mobSrc = wp_get_attachment_image_src($img['floorplan'], 'medium', false);
+        echo '<div class="single-img">';
+        $mobSrc = wp_get_attachment_image_src($img['floorplan'], 'large', false);
         $mobSrc = $mobSrc[0];
         ?>
+        <span class="title">
+          <?php
+          $title = imgAndTitle($img['title']);
+          if($title != '&nbsp;' && $img['copy'] != false) {
+            echo $title.'<span class="dash"> - </span>';
+          } else {
+            echo $title;
+          }
+          ?>
+        </span>
+        <span class="copy">
+          <?php
+          echo wpautop(imgAndTitle($img['copy']));
+          ?>
+        </span>
         <hr data-src="<?php echo $mobSrc;?>" />
         <?php
+        echo '</div>';
       }
 
       ?>
@@ -273,18 +330,32 @@ $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
   </div>
 
   <div class="towerfloors">
-    <div class="title">Tower Floors</div>
-    <div class="copy">
-      <?php echo wpautop($modalcopy['tower-floors-copy']);?>
-    </div>
+
     <div class="images">
       <?php
       foreach($towerfloorplans as $img){
-        $mobSrc = wp_get_attachment_image_src($img['floorplans'], 'medium', false);
+        echo '<div class="single-img">';
+        $mobSrc = wp_get_attachment_image_src($img['floorplans'], 'large', false);
         $mobSrc = $mobSrc[0];
         ?>
+        <span class="title">
+          <?php
+          $title = imgAndTitle($img['title']);
+          if($title != '&nbsp;' && $img['copy'] != false) {
+            echo $title.'<span class="dash"> - </span>';
+          } else {
+            echo $title;
+          }
+          ?>
+        </span>
+        <span class="copy">
+          <?php
+          echo wpautop(imgAndTitle($img['copy']));
+          ?>
+        </span>
         <hr data-src="<?php echo $mobSrc;?>" />
         <?php
+        echo '</div>';
       }
 
       ?>
@@ -296,11 +367,10 @@ $towerfloorplans = get_post_meta( $workspace->ID,'tower-floorplans', true );
 
 <div id="workspace-modal" class="generic-modal">
   <div class="inner">
-    <div class="words">
-      <h2 class="sm">Building Within A Building</h2>
+    <div class="words __changing">
+      <h2 class="sm"></h2>
       <div class="copy">
-        33 - 36 Floors<br/>
-        15,000 sf
+
       </div>
     </div>
     <div class="spinner">

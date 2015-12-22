@@ -23,13 +23,20 @@ html.skrollr {
     opacity: 0;
   }
   #bwb-bg {
-    background: $teal;
+    background: #12a499;
     //background: linear-gradient(to bottom,  #23514e 0% ,   $teal 50%,   #23514e 100%);
-    background: linear-gradient(to bottom, #23514e 0%, $teal 45%, $teal 55%, #23514e 100%);
+  //  background: linear-gradient(to bottom, #23514e 0%, $teal 45%, $teal 55%, #23514e 100%);
   }
   #penthouse-bg {
-    background: #2f798c;
-    background: linear-gradient(to bottom,  #1b454f 0% ,   #2f798c 50%,   #1b454f 100%);
+    //background: #2f798c;
+    //background: linear-gradient(to bottom,  #1b454f 0% ,   #2f798c 50%,   #1b454f 100%);
+    background:#044f5a;
+  }
+  #location-bg {
+    background:#15726a;
+  }
+  #space-bg {
+    background: #167452;
   }
   #workspace-intro {
     background: linear-gradient(to bottom,  darken($teal,20%) 0%,  $black 100%);
@@ -42,7 +49,7 @@ html.skrollr {
   }
   #contact-bg {
     background: $black;
-    background: linear-gradient(to bottom,  darken($teal,20%) 0%,  $black 75%);
+    background: linear-gradient(to bottom,  darken(#167452,0%) 0%,  $black 75%);
   }
 
 }

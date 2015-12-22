@@ -29,7 +29,34 @@
       }
     }
   }
-  button {
+  .slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 15px;
+    text-align: center;
+    line-height:1px;
+    > li {
+      margin: 0 3px;
+      display:inline-block;
+      vertical-align:top;
+      opacity: .5;
+      &.slick-active {
+        opacity:1;
+      }
+      button {
+        display:block;
+        width: 6px;
+        height: 6px;
+        font-size: .1em;
+        background: white;
+        border-radius: 50%;
+        text-indent: -9999px;
+        cursor:pointer;
+      }
+    }
+  }
+  /*button {
     position: absolute;
     right: 0;
     top: 50%;
@@ -73,5 +100,5 @@
         left: -70px;
       }
     }
-  }
+  }*/
 }

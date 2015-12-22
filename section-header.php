@@ -2,7 +2,7 @@
   <h1 class="logo">
     <a href="#home">
       <span class="hide"><?php echo $siteTitle;?></span>
-      <img src="<?php echo $siteDir;?>/assets/imgs/logo-png.png" alt="Park Avenue Tower" />
+      <img src="<?php echo $siteDir;?>/assets/imgs/logo-png-teal.png" alt="Park Avenue Tower" />
     </a>
   </h1>
 
@@ -26,12 +26,12 @@
         'amenities',
         'location',
         //'gallery',
-        'workspace',
+        'availabilities',
         'contact'
       );
       foreach($links as $link) {
         ?>
-        <a href="#<?php echo $link;?>"><?php echo strtoupper($link);?></a>
+        <a class="<?php echo $link;?>" href="#<?php echo $link;?>"><?php echo strtoupper($link);?></a>
         <?php
       }
 

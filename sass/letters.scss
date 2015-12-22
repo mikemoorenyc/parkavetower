@@ -1,5 +1,7 @@
 .letter-holder {
-  position:relative;
+  position:absolute;
+  width:100%;
+  pointer-events:none;
   @media(max-width:1000px) {
     display:none;
   }
@@ -106,6 +108,28 @@
 }
 .letter-holder > div.activated > span:nth-child(4) {
   animation: fourth-frame 1.5s linear 1;
+}
+.letter-holder {
+  &#space {
+    > div {
+      top:280px;
+    }
+  }
+  &#location-letters {
+    > div {
+      top:250px;
+    }
+  }
+  &#welcome {
+    > div {
+      top:185px;
+    }
+  }
+  &#club-letters {
+    > div {
+      top:275px;
+    }
+  }
 }
 
 
