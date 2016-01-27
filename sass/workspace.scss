@@ -383,6 +383,8 @@
             letter-spacing:.15em;
             white-space: nowrap;
             transition: all $ts;
+            color:$white;
+            border-color:$white;  
             &:hover, &.__hovering {
               color:$white;
               border-color:$white;

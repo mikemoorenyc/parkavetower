@@ -24,9 +24,9 @@
         //'home',
         'building',
         'amenities',
+                'availabilities',
         'location',
         //'gallery',
-        'availabilities',
         'contact'
       );
       foreach($links as $link) {

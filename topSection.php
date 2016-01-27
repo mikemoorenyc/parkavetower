@@ -76,9 +76,12 @@ $mobSrc = $mobSrc[0];
   </div>
 
   <div id="intro-video">
-    <div class="video-container">
+    <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/video-place.jpg" data-mob="<?php echo $siteDir;?>/assets/imgs/video-place.jpg" />
+
+    <div class="video-container hide">
       <iframe src="https://player.vimeo.com/video/34741214?title=0&byline=0&portrait=0&color=54c3bb" width="498" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
+
 
   </div>
 

@@ -102,7 +102,7 @@ WARNING CONTACT META NAMES ARE SWAPPED SORRY
 
   if(is_array($ngkf) && count($ngkf) > 0):?>
   <div class="contact-block ngkf">
-    <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/logo-ngkf.svg" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-ngkf.svg" alt="NGKF" />
+    <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/logo-ngkf.png" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-ngkf.png" alt="NGKF" />
     <ul class="no-style">
       <?php contactList($ngkf);?>
     </ul>

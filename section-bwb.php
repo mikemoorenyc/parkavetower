@@ -67,7 +67,7 @@
 
     ?>
     <div class="copy-container white">
-      <h2><?php echo $penthouse->post_title;?></h2>
+      <!--<h2><?php echo $penthouse->post_title;?></h2>-->
       <div class="copy">
         <?php echo wpautop($penthouse->post_content);?>
 
@@ -105,7 +105,7 @@
           <li>
             <a class="active btn-dl" href="#" data-index="0">
               <span class="copy">
-              <span class="mob-hide">Penthouse</span> Views
+              <span class="mob-hide">Penthouse</span> View
             </span>
             </a>
           </li>

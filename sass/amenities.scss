@@ -1,4 +1,9 @@
 #amenities {
+  @media($dt) {
+    html.__parallaxed & {
+      margin-bottom:-250px;
+    }
+  }
   .container-1200 {
     padding-top: 70px;
     @media($dt) {
