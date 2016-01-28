@@ -11,7 +11,8 @@
   .top-copy {
     padding-top: 70px;
     @media($dt) {
-      padding-top:560px;
+    //  padding-top:560px;
+    padding-top: 0;
     }
   }
   .map {

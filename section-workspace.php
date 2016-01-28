@@ -1,7 +1,5 @@
-<?php
-include 'section-reimagined.php';
-?>
-<section id="availabilities" class=>
+
+<section id="availabilities" class="" data-anchor="building">
 <div class="container-1200">
   <div class="letter-holder aspecter" id="space" data-basewidth="1200" style="top:0px; height:575px;">
     <div class="letter s" style="width:48em; height: 85em; left:141em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-75px)" data-top-bottom="transform:translateY(75px)" data-anchor-target=".letter-holder#space">
@@ -42,6 +40,8 @@ include 'section-reimagined.php';
   </div>
 
 </div>
+
+<?php include 'block-penthouse.php';?>
 
 
 <div id="elevation-section">
@@ -242,9 +242,18 @@ include 'section-reimagined.php';
 
   </div>
 
+  <div id="workspace-gal">
+
+    <?php cardMaker($workspace->ID, 'workspace-gallery');?>
+  </div>
+
+
+
 
 </div>
 </div>
+
+  <?php include 'block-bwb.php';?>
 
 <?php
 $modalcopy = get_post_meta( $workspace->ID,'modal-info', true );

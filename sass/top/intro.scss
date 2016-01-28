@@ -2,7 +2,8 @@
   padding:40px 0 0;
   position:relative;
   @media($dt) {
-    padding-top: 464px;
+  //  padding-top: 464px;
+  padding-top: 0;
   }
   .copy-container {
     @media($dt) {

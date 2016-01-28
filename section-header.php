@@ -29,6 +29,13 @@
         //'gallery',
         'contact'
       );
+      $links = array(
+        'transformation',
+        'amenities',
+        'building',
+        'location',
+        'contact'
+      );
       foreach($links as $link) {
         ?>
         <a class="<?php echo $link;?>" href="#<?php echo $link;?>"><?php echo strtoupper($link);?></a>

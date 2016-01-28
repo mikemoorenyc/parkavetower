@@ -28,10 +28,10 @@ function positionCheck() {
   $('#content-wrapper > section').removeClass("in-viewport");
   $( '#content-wrapper > section:in-viewport( )' ).addClass('in-viewport');
 
-  var posUpdate = $('#content-wrapper > section.in-viewport:first').attr('id');
+  var posUpdate = $('#content-wrapper > section.in-viewport:first').data('anchor');
   //console.log(posUpdate);
   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-    posUpdate = $('#content-wrapper > section:last').attr('id');
+    posUpdate = $('#content-wrapper > section:last').data('anchor');
   }
   if(posUpdate !== currentPosition) {
     currentPosition = posUpdate;

@@ -1,4 +1,4 @@
-<section id="contact">
+<section id="contact" data-anchor="contact">
 <?php
 $contact = get_page_by_title('Contact Section');
 ?>

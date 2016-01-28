@@ -2,7 +2,8 @@
   > #elevation-section >.container-1200 {
     padding-top: 70px;
     @media($dt) {
-      padding-top:575px;
+    //  padding-top:575px;
+    padding-top: 170px;
     }
   }
   .elevation {
@@ -384,7 +385,7 @@
             white-space: nowrap;
             transition: all $ts;
             color:$white;
-            border-color:$white;  
+            border-color:$white;
             &:hover, &.__hovering {
               color:$white;
               border-color:$white;
@@ -412,6 +413,12 @@
           padding:0;
         }
       }
+    }
+  }
+  #workspace-gal {
+    padding-top: 20px;
+    @media($dt) {
+      padding-top: 75px;
     }
   }
 }

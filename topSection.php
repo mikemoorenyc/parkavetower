@@ -1,4 +1,4 @@
-<section id="home">
+<section id="home" data-anchor="home">
 
 <?php
 $home = get_page_by_title('Home');

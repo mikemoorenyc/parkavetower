@@ -1,6 +1,7 @@
 function linkMover(id) {
   var navOff = $('header').height();
-  var scrollTo = $(''+id).offset().top;
+  var pos = id.replace('#','');
+  var scrollTo = $('section[data-anchor="'+pos+'"]').offset().top;
   $('html').addClass('__menu-scrolling');
   stateSender(id);
   currentPosition = id;

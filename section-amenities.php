@@ -1,4 +1,4 @@
-<section id="amenities" class="gradientmaker">
+<section id="amenities" class="gradientmaker" data-anchor="amenities">
   <span class="stops hide">
     <hr data-amount="0" data-from="below" data-position="bottom" data-color="#044e5a" />
   </span>
