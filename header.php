@@ -127,7 +127,7 @@ else: ?>
 </div>
 <div id="css-checker"></div>
 
-<?php //include 'fader-backgrounds.php';?>
+<?php include 'fader-backgrounds.php';?>
 
 
 

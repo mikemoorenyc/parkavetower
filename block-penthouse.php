@@ -8,7 +8,7 @@
   $penthouse = get_page_by_title('The Penthouse');
 
   ?>
-  <div class="copy-container white">
+  <div class="copy-container ">
     <!--<h2><?php echo $penthouse->post_title;?></h2>-->
     <div class="copy">
       <?php echo wpautop($penthouse->post_content);?>

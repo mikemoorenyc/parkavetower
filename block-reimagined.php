@@ -7,7 +7,7 @@
 $reimagined = get_page_by_title('Newly Reimagined');
 ?>
 <div class="container-1200">
-  <div class="copy-container">
+  <div class="copy-container white">
 
     <?php echo wpautop($reimagined->post_content);?>
   </div>

@@ -7,7 +7,7 @@
 
   ?>
   <div class="container-1200">
-    <div class="copy-container white">
+    <div class="copy-container ">
       <h1 class="middle"><?php echo $bwb->post_title;?></h1>
       <div class="copy">
         <?php echo wpautop($bwb->post_content);?>
