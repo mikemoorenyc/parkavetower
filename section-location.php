@@ -81,7 +81,7 @@
     $mapurl = $mapurl[0];
     ?>
     <a class="map-container generic-module-popper" href="<?php echo $mapurl;?>" data-function="genericModulePanZoom" title="Enlarge">
-      <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/map-updated.png" data-mob="<?php echo $siteDir;?>/assets/imgs/map-updated.png" />
+      <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/map-update-2.png" data-mob="<?php echo $siteDir;?>/assets/imgs/map-updated.png" />
 
     </a>
 
