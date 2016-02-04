@@ -87,6 +87,9 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 300;
   margin-bottom: 1em;
   line-height: (24em/22);
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media($dt) {
     font-size: 30px;
     &.middle {

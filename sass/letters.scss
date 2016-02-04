@@ -51,9 +51,17 @@
   $location-letters: 'l' 'o' 'c' 'a' 't' 'i' 'o-2' 'n';
   @include letterMaker($location-letters,'location')
 }
+#building-letters {
+  $building-letters: 'b' 'u' 'i' 'l' 'd' 'i-2' 'n' 'g';
+  @include letterMaker($building-letters,'building')
+}
 #club-letters {
   $club-letters: 'c' 'l' 'u' 'b';
   @include letterMaker($club-letters,'club')
+}
+#reimagined-letters {
+  $reimagined-letters: 'r' 'e' 'i' 'm' 'a' 'g' 'i-2' 'n' 'e-2' 'd';
+  @include letterMaker($reimagined-letters,'reimagined')
 }
 #welcome {
   $welcome-letters: 'w' 'e-1' 'l' 'c' 'o' 'm' 'e';
@@ -110,7 +118,7 @@
   animation: fourth-frame 1.5s linear 1;
 }
 .letter-holder {
-  &#space {
+  &#space, &#building-letters {
     > div {
       top:280px;
     }
@@ -121,6 +129,11 @@
     }
   }
   &#welcome {
+    > div {
+      top:185px;
+    }
+  }
+  &#reimagined-letters {
     > div {
       top:185px;
     }

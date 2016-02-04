@@ -4,6 +4,7 @@
     @media($dt) {
     //  padding-top:575px;
     padding-top: 170px;
+    padding-top:0;
     }
   }
   .elevation {
@@ -107,6 +108,7 @@
 
         left: 0em;
         top: 0em;
+      //  z-index:2;
         div {
           height: 15em;
           position:relative;
@@ -114,8 +116,15 @@
           left: 37em;
           width:156em;
           opacity: 0;
+          transition: opacity $ts;
           &.__activated {
             animation: hilighter .5s linear 1 ;
+            &.enabled {
+              animation: hilighter-stay .25s linear 1 ;
+              animation-fill-mode: forwards;
+              opacity:.47;
+              transition-delay: $ts;
+            }
           }
           &.fl-45 {
             position: absolute;
@@ -228,7 +237,7 @@
           &.fl-35,&.fl-31,&.fl-23,&.fl-19,&.fl-15,&.fl-10,&.fl-8 {
             height: 16em;
           }
-          &.fl-7,&.fl-6,&.fl-5,&.fl-4,&.fl-3,&.fl-2,&.fl-1 {
+          &.fl-6,&.fl-5,&.fl-4,&.fl-3,&.fl-2,&.fl-1 {
             left: 0;
             width:193em;
           }
@@ -321,7 +330,7 @@
           transition: opacity $ts;
 
           &:hover,&.__hovering {
-            opacity:.25;
+            opacity:0;
           }
           &.bwb {
             left: 1px;
@@ -434,4 +443,13 @@
   100% {
     opacity: 0;
   }
+}
+@keyframes hilighter-stay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.47;
+  }
+
 }

@@ -15,15 +15,16 @@
       </div>
 
     </div>
+    <!--
     <div class="bwb-graphic container-1200 pad ">
-      <!--<img src="<?php echo $siteDir;?>/assets/imgs/bwb-placeholder.png" />-->
       <div class="container aspecter" data-basewidth="1061">
         <img class="bwb-main lazy-load __activated" data-dt="<?php echo $siteDir;?>/assets/imgs/bwb-real.png" data-mob="<?php echo $siteDir;?>/assets/imgs/bwb-real.png" />
         <img class="bwb-highlight lazy-load __activated" data-dt="<?php echo $siteDir;?>/assets/imgs/bwb-fp-highlight.png" data-mob="<?php echo $siteDir;?>/assets/imgs/bwb-fp-highlight.png" />
       </div>
     </div>
+    -->
 
-    <div class="dl-holder">
+    <!--<div class="dl-holder">
       <?php
       $dllink = get_post_meta( $bwb->ID, 'bwb-download', true );
       $dllink = $dllink[0];
@@ -39,7 +40,7 @@
         </span>
       </a>
 
-    </div>
+    </div>-->
     <div class="bwb-gallery">
 
       <?php

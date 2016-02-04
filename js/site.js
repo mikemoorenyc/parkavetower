@@ -201,7 +201,7 @@ function initializer() {
   },1000*5);
 
   galleryMaker();
-  viewMaker();
+  //viewMaker();
   aspecter();
   backgroundGradient();
 

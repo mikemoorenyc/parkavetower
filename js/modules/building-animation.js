@@ -16,7 +16,7 @@ function buildingAnimation() {
   var floorCount = $('.dt-elevation .lights .floor').length;
   var floorActive = 1;
   var floorlight = setInterval(function(){
-    if(floorActive > floorCount) {
+    if(floorActive > floorCount+1) {
       clearInterval(floorlight);
       elevatorAnimation();
       return false;

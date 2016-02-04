@@ -1,7 +1,65 @@
 
 <section id="availabilities" class="" data-anchor="building">
 <div class="container-1200">
-  <div class="letter-holder aspecter" id="space" data-basewidth="1200" style="top:0px; height:575px;">
+  <div class="letter-holder aspecter" id="building-letters" data-basewidth="1200" style="height:575px;">
+    <div class="letter b" style="width:50em; height: 85em; left:89em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-25px)" data-top-bottom="transform:translateY(25px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter u" style="width:51em; height: 84em; left: 221em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-75px)" data-top-bottom="transform:translateY(75px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter i" style="width:3em; height: 82em; left: 372em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(55px)" data-top-bottom="transform:translateY(-50px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter l" style="width:52em; height: 81em; left: 501em;">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+    <div class="letter d" style="width:56em; height: 90em;  right:508em;" >
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter i-2" style="width:3em; height: 82em; right:395em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(100px)" data-top-bottom="transform:translateY(-100px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter n" style="width:49em; height: 81em; right:230em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-50px)" data-top-bottom="transform:translateY(50px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+    <div class="letter g" style="width:52em; height: 87em; right:94em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(150px)" data-top-bottom="transform:translateY(-150px)" data-anchor-target="#building-letters">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+    </div>
+
+
+  </div>
+  <!--<div class="letter-holder aspecter" id="space" data-basewidth="1200" style="top:0px; height:575px;">
     <div class="letter s" style="width:48em; height: 85em; left:141em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-75px)" data-top-bottom="transform:translateY(75px)" data-anchor-target=".letter-holder#space">
       <span class="s1"></span>
       <span class="s2"></span>
@@ -37,11 +95,11 @@
       <span class="s4"></span>
     </div>
 
-  </div>
+  </div>-->
 
 </div>
 
-<?php include 'block-penthouse.php';?>
+
 
 
 <div id="elevation-section">
@@ -58,6 +116,15 @@
     <?php echo wpautop($workspace->post_content);?>
   </div>
 
+  <div id="workspace-gal">
+
+    <?php cardMaker($workspace->ID, 'workspace-gallery');?>
+  </div>
+
+  <?php include 'block-penthouse.php';?>
+
+  <?php include 'block-bwb.php';?>
+
   <div class="elevation">
     <div class="inner gradientmaker scroll-magic" data-scrollfunction="buildingAnimation">
       <span class="stops hide">
@@ -72,16 +139,30 @@
         <div class="lights">
           <?php
           //44
+          $list = get_post_meta( $workspace->ID, 'avail-list', true );
+          $listValues = array();
+          foreach($list as $lv) {
+            array_push($listValues, intval($lv['fl-number']));
+          }
+        //  var_dump($listValues);
           for($x = 45; $x > 0; $x--) {
-            ?>
-            <div class="floor fl-<?php echo $x;?>" ></div>
-            <?php
+            if($x !== 14) {
+              if(in_array($x-1, $listValues)) {
+                $enabled = 'enabled';
+              } else {
+                $enabled = '';
+              }
+              ?>
+              <div class="floor fl-<?php echo $x;?> <?php echo $enabled;?>" ></div>
+              <?php
+            }
+
           }
           ?>
         </div>
         <div class="avail-list">
           <?php
-          $list = get_post_meta( $workspace->ID, 'avail-list', true );
+
           $listArray = array();
           foreach($list as $l) {
             if($l['hidden'] !== 'hidden') {
@@ -242,10 +323,7 @@
 
   </div>
 
-  <div id="workspace-gal">
 
-    <?php cardMaker($workspace->ID, 'workspace-gallery');?>
-  </div>
 
 
 
@@ -253,7 +331,7 @@
 </div>
 </div>
 
-  <?php include 'block-bwb.php';?>
+
 
 <?php
 $modalcopy = get_post_meta( $workspace->ID,'modal-info', true );

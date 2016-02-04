@@ -3,7 +3,8 @@
   padding-top: 105px;
 
   margin: 0 auto;
-  padding: 105px percentage(12/320) 0 percentage(12/320);
+  //padding: 105px percentage(12/320) 0 percentage(12/320);
+  padding: 105px 0 0 0;
   .slide-container {
     padding: 0px 0;
     position:relative;
@@ -116,15 +117,15 @@
       z-index:2;
       //margin-bottom: -6px;
       .img-holder {
-        margin-left: 9.5%;
-        width: 47%;
+        margin-left: 0%;
+        width: percentage(674/1200);
         img {
           box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.11);
         }
       }
       .title {
-        width: 100% - (47%+9.5%);
-        left: (47%+9.5%) !important;
+        width: 100% - (percentage(674/1200));
+        left: percentage(674/1200) !important;
 
       }
     }
@@ -132,14 +133,14 @@
 
       z-index:3;
       .img-holder {
-        width:62.5%;
+        width:percentage(730/1200);
         img {
            box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.11);
         }
       }
       .title {
-        width: 100% - 62.5%;
-        right: 100% - (100% - 62.5%) !important;
+        width: 100% - percentage(730/1200);
+        right: percentage(730/1200)!important;
       }
 
     }
@@ -147,27 +148,27 @@
       z-index:4;
 
       .img-holder {
-        width: 63%;
+        width: percentage(667/1200);
         img {
           box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.11);
         }
       }
       .title {
-        width: 100% - 63%;
-        left: 100% - (100% - 63%) !important;
+        width: 100% - percentage(667/1200);
+        left: percentage(667/1200) !important;
       }
     }
     &:nth-child(4n+4) {
       z-index:1;
       .img-holder {
-        width: 41.5%;
+        width: percentage(555/1200);
         img {
           box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.11);
         }
       }
       .title {
-        width: 100% - 41.5%;
-        right: 100% - (100% - 41.5%) !important;
+        width: 100% - percentage(555/1200);
+        right: percentage(555/1200) !important;
       }
     }
   }

@@ -1,10 +1,10 @@
 #penthouse {
+  padding-top: 30px;
+  @media($dt) {
+    padding-top:100px;
+  }
   .container-1200 {
-    padding-top: 65px;
-    @media($dt) {
-    //  padding-top:170px;
-    padding-top: 0px;
-    }
+
   }
   #penthouse-gallery {
     padding-top: 30px;

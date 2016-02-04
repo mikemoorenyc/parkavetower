@@ -5,9 +5,9 @@ function cardstackMaker() {
     var cardLength = cards.length;
     var cardsLoaded = 0;
     var slickSettings = {
-      nextArrow: '<button type="button" class="slick-next"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
-      prevArrow: '<button type="button" class="slick-prev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
-      arrows: false,
+      nextArrow: '<button type="button" class="slick-next btn"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
+      prevArrow: '<button type="button" class="slick-prev btn"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#direction202"></use></svg></button>',
+      arrows: true,
       dots: true,
       speed: ts,
       //adaptiveHeight: true,

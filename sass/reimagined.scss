@@ -3,7 +3,8 @@
   .container-1200 {
     padding-top: 75px;
     @media($dt) {
-      padding-top:190px;
+      //padding-top:190px;
+      padding-top: 0;
     }
   }
   .reimagined-cards {

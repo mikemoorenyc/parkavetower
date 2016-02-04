@@ -1,18 +1,30 @@
 #building-within-a-building {
   //background: grey;
   .wrapper {
-    padding: 65px 0 0px;
+    padding:30px 0 0px;
     @media($dt) {
-      padding-top:170px;
+      padding-top:100px;
     }
   }
   .dl-holder {
     padding-top: 40px;
   }
   .bwb-gallery {
-    padding-top: 80px;
+    padding-top: 40px;
     @media($dt) {
-      padding-top:155px;
+      padding-top:60px;
+    }
+    .cardStack {
+      &:before {
+        display:block;
+        content:'CONCEPTUAL';
+        position:absolute;
+        z-index: 2;
+        left: 10px;
+        top: 10px;
+        font-size: 10px;
+        line-height:1;
+      }
     }
   }
   .bwb-graphic {
