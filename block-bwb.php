@@ -6,7 +6,11 @@
   $bwb =get_page_by_title('Building Within A Building');
 
   ?>
-  <div class="container-1200">
+  <div class="container-1200 gradientmaker">
+    <span class="stops hide">
+
+        <hr data-amount="0" data-from="above" data-position="middle" data-color="#000" />
+    </span>
     <div class="copy-container ">
       <h1 class="middle"><?php echo $bwb->post_title;?></h1>
       <div class="copy">

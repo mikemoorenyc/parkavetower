@@ -117,6 +117,19 @@
           width:156em;
           opacity: 0;
           transition: opacity $ts;
+          &.halved {
+            &:before {
+              display:block;
+              content:'';
+              position:absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width:50%;
+              background:transparent;
+              transition: background $ts;
+            }
+          }
           &.__activated {
             animation: hilighter .5s linear 1 ;
             &.enabled {
@@ -124,6 +137,20 @@
               animation-fill-mode: forwards;
               opacity:.47;
               transition-delay: $ts;
+            }
+          }
+          &.halved {
+            opacity:1;
+            background: transparent;
+            &.__activated {
+              animation: hilighter-halved .5s linear 1 ;
+              &.enabled {
+                opacity:1;
+                &:before {
+                  background: rgba(white,.47);
+                  transition-delay:$ts/2;
+                }
+              }
             }
           }
           &.fl-45 {
@@ -442,6 +469,17 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes hilighter-halved {
+  0% {
+    background: rgba(white,0)
+  }
+  50% {
+    background: rgba(white,0.47)
+  }
+  100% {
+    background: rgba(white,0);
   }
 }
 @keyframes hilighter-stay {

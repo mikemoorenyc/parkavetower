@@ -21,10 +21,10 @@ $mobSrc = $mobSrc[0];
 
 </div>
 <div class="container-1200 gradientmaker">
-  <span class="stops hide">
+  <!--<span class="stops hide">
     <hr data-amount="0" data-from="below" data-position="top" data-color="#000" />
     <hr data-amount="0" data-from="below" data-position="bottom" data-color="#12a499" />
-  </span>
+  </span>-->
 <div id="welcome" class="letter-holder aspecter" data-basewidth="1200" style="height:464px;">
   <div class="letter w" style="width:82em; height: 88em; left: 67em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-100px)" data-top-bottom="transform:translateY(100px)" data-anchor-target=".letter-holder#welcome">
     <span class="s1"></span>

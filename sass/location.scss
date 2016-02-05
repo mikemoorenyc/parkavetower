@@ -4,6 +4,29 @@
       //margin-top:-250px;
     }
   }
+  .copy-container {
+    position: relative;
+    padding-bottom: 25px;
+    &:after {
+      display:block;
+      content:'';
+      position:absolute;
+      left: 50%;
+      bottom: 0;
+      transform:translateX(-50%);
+      width: 300px;
+      height: 15px;
+      background: url('../assets/imgs/subways.png');
+      background-size: 100% 100%;
+    }
+    @media($dt) {
+      padding-bottom:40px;
+      &:after {
+        width:450px;
+        height:23px;
+      }
+    }
+  }
   .map-container {
     cursor: zoom-in;
     display:block;

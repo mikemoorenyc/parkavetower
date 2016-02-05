@@ -211,10 +211,10 @@ function initializer() {
 
   if(!(Modernizr.touchevents)) {
     $('html').addClass('__parallaxed');
-    $('#amenities-gallery').parallax({
+  /*  $('#amenities-gallery').parallax({
       calibrateX: true,
       calibrateY: true
-    });
+    });*/
 
   }
   setTimeout(function(){

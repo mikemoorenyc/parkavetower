@@ -109,10 +109,10 @@
 
   ?>
   <div class="copy-container gradientmaker">
-    <span class="stops hide">
+    <!--<span class="stops hide">
       <hr data-amount="0" data-from="below" data-position="top" data-color="#167452" />
 
-    </span>
+    </span>-->
     <?php echo wpautop($workspace->post_content);?>
   </div>
 
@@ -128,6 +128,7 @@
   <div class="elevation">
     <div class="inner gradientmaker scroll-magic" data-scrollfunction="buildingAnimation">
       <span class="stops hide">
+        <!--<hr data-amount="0" data-from="above" data-position="top" data-color="#000" />-->
         <hr data-amount="0" data-from="above" data-position="top" data-color="#167452" />
 
       </span>
@@ -140,20 +141,36 @@
           <?php
           //44
           $list = get_post_meta( $workspace->ID, 'avail-list', true );
-          $listValues = array();
+          /*$listValues = array();
           foreach($list as $lv) {
-            array_push($listValues, intval($lv['fl-number']));
-          }
+            array_push($listValues, array(
+              "fl" => intval($lv['fl-number']),
+              'hidden' => $lv['hidden'],
+              'half'
+            ));
+          }*/
         //  var_dump($listValues);
           for($x = 45; $x > 0; $x--) {
             if($x !== 14) {
+              $enabled = '';
+              $halved = '';
+              foreach($list as $lv) {
+                if($x-1 == intval($lv['fl-number']) && $lv['hidden']!=='hidden') {
+                  $enabled = 'enabled';
+                }
+                if($x-1 == intval($lv['fl-number']) && $lv['half-floor'] == 'half') {
+                  $halved = 'halved';
+                }
+              }
+              /*
               if(in_array($x-1, $listValues)) {
                 $enabled = 'enabled';
               } else {
                 $enabled = '';
               }
+              */
               ?>
-              <div class="floor fl-<?php echo $x;?> <?php echo $enabled;?>" ></div>
+              <div class="floor fl-<?php echo $x;?> <?php echo $enabled;?> <?php echo $halved;?>" ></div>
               <?php
             }
 

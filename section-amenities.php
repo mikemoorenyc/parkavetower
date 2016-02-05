@@ -1,7 +1,7 @@
 <section id="amenities" class="gradientmaker" data-anchor="amenities">
-  <span class="stops hide">
+  <!--<span class="stops hide">
     <hr data-amount="0" data-from="below" data-position="bottom" data-color="#044e5a" />
-  </span>
+  </span>-->
   <div class="container-1200" style="padding:0;">
     <div class="letter-holder aspecter" data-basewidth="1200" id="club-letters" style="height:588px;">
       <div class="letter c" style="width:50em; height: 87em; left: 193em;" data-center-center="transform:translateY(0px)" data-bottom-top="transform:translateY(-25px)" data-top-bottom="transform:translateY(25px)" data-anchor-target="#club-letters">
@@ -43,9 +43,9 @@ $amenities = get_page_by_title('Amenities Section');
 <div class="container-1200">
   <article id="club">
     <div class="copy-container gradientmaker wide">
-      <span class="stops hide">
+    <!--  <span class="stops hide">
         <hr data-amount="150" data-from="below" data-position="top" data-color="#044e5a" />
-      </span>
+      </span>-->
   <?php echo wpautop($amenities->post_content);?>
     </div>
 

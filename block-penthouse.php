@@ -1,8 +1,8 @@
 <div id="penthouse" class="gradientmaker">
-  <span class="stops hide">
+<!--  <span class="stops hide">
 
     <hr data-amount="0" data-from="below" data-position="bottom" data-color="#12a499" />
-  </span>
+  </span>-->
   <div class="container-1200">
   <?php
   $penthouse = get_page_by_title('The Penthouse');

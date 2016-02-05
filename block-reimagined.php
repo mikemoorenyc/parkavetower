@@ -1,7 +1,7 @@
 <article id="newly-reimagined" class="gradientmaker">
-  <span class="stops hide">
+<!--  <span class="stops hide">
     <hr data-amount="150" data-from="above" data-position="bottom" data-color="#15726a" />
-  </span>
+  </span>-->
 
 <?php
 $reimagined = get_page_by_title('Newly Reimagined');
