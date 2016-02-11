@@ -115,15 +115,16 @@
     </span>-->
     <?php echo wpautop($workspace->post_content);?>
   </div>
-
+</div>
   <div id="workspace-gal">
 
     <?php cardMaker($workspace->ID, 'workspace-gallery');?>
   </div>
 
   <?php include 'block-penthouse.php';?>
-
   <?php include 'block-bwb.php';?>
+<div class="container-1200">
+
 
   <div class="elevation">
     <div class="inner gradientmaker scroll-magic" data-scrollfunction="buildingAnimation">

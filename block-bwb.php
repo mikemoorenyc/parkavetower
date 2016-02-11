@@ -45,6 +45,7 @@
       </a>
 
     </div>-->
+    </div>
     <div class="bwb-gallery">
 
       <?php
@@ -54,7 +55,7 @@
 
     </div>
 
-  </div>
+
 
 
   </div>

@@ -10,7 +10,7 @@ function cardMaker($ID, $metaName) {
     <div class="card">
       <div class="inner">
         <?php
-        $dtSrc = wp_get_attachment_image_src($card['image'], 'large', false);
+        $dtSrc = wp_get_attachment_image_src($card['image'], 'fake-full', false);
         $dtSrc = $dtSrc[0];
         $mobSrc = wp_get_attachment_image_src($card['image'], 'medium', false);
         $mobSrc = $mobSrc[0];

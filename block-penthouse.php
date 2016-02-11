@@ -16,7 +16,8 @@
     </div>
 
   </div>
-  <div id="penthouse-gallery">
+  </div>
+  <div data id="penthouse-gallery">
     <?php
     cardMaker($penthouse->ID, 'penthouse-gallery');
     ?>
@@ -24,5 +25,5 @@
 
   </div>
 
-  </div>
+
 </div>

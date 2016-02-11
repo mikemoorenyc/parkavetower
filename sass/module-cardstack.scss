@@ -11,8 +11,11 @@
     text-align: center;
     >.inner {
       position:relative;
-      display:inline-block;
+    //  display:inline-block;
       vertical-align: top;
+      img {
+        width: 100%;
+      }
       .caption {
         position: absolute;
         left: 0;

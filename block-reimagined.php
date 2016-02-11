@@ -74,12 +74,14 @@ $reimagined = get_page_by_title('Newly Reimagined');
     <?php echo wpautop($reimagined->post_content);?>
   </div>
 
-  <article class="reimagined-cards">
-    <?php cardMaker($reimagined->ID, 'reimagined-images');?>
 
-  </article
 
 </div>
+
+<article class="reimagined-cards">
+  <?php cardMaker($reimagined->ID, 'reimagined-images');?>
+
+</article>
 
 
 
