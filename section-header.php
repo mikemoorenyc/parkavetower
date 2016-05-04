@@ -1,7 +1,11 @@
 <header id="header">
   <h1 class="logo">
-    <a href="#home">
-      <span class="hide"><?php echo $siteTitle;?></span>
+    <a itemprop="url" href="<?php echo $homeURL;?>/#home">
+      <span class="hide" itemprop="name"><?php echo $siteTitle;?></span>
+      <div class="hide" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="40.760858" />
+        <meta itemprop="longitude" content="-73.972084" />
+      </div>
       <img src="<?php echo $siteDir;?>/assets/imgs/logo-png-teal.png" alt="Park Avenue Tower" />
     </a>
   </h1>

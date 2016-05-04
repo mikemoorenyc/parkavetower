@@ -80,12 +80,14 @@ $mobSrc = $mobSrc[0];
 </div>
 </div>
 <div id="intro-video">
-  <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/full-w-intro.jpg" data-mob="<?php echo $siteDir;?>/assets/imgs/video-place.jpg" style="width:100%;"/>
-<!--
-  <div class="video-container hide">
-    <iframe src="https://player.vimeo.com/video/34741214?title=0&byline=0&portrait=0&color=54c3bb" width="498" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <!--
+  <img class="lazy-load" data-dt="<?php echo $siteDir;?>/assets/imgs/full-w-intro.jpg" data-mob="<?php echo $siteDir;?>/assets/imgs/video-place.jpg" style="width:100%;"/>-->
+
+  <div class="video-container ">
+  <iframe src="https://player.vimeo.com/video/162882162" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
   </div>
--->
+
 
 </div>
 

@@ -278,6 +278,7 @@
         </div>
 
       </div>
+        <img src="<?php echo $siteDir;?>/assets/imgs/wired-logo.png" class="wired-logo"/>
         <ul class="no-style poplinks">
           <li class="penthouse">
             <a href="#penthouse" class="penthouse">

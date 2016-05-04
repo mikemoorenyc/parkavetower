@@ -121,7 +121,7 @@ else: ?>
 
 </head>
 
-<body <?php body_class(); ?> id="top">
+<body <?php body_class(); ?> id="top" itemscope itemtype="http://schema.org/Place">
 <div class="hide">
   <?php include 'assets/svgs.svg';?>
 </div>
@@ -132,5 +132,13 @@ else: ?>
 
 
   <?php include 'section-header.php';?>
+  <div class="hide" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">
+        65 E 55th St
+    </span>
+    <span itemprop="addressLocality">New York</span>,
+        <span itemprop="addressRegion">NY</span>
+        <span itemprop="postalCode">10022</span>
 
-<div id="content-wrapper">
+  </div>
+<div id="content-wrapper" >
